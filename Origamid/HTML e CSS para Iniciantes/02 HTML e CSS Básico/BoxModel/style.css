@@ -1,0 +1,21 @@
+div {
+  background: red;
+  width: 140px;
+  height: 80px;
+  padding: 20px;
+  border: 10px solid #111;
+  margin: 30px;
+}
+
+body {
+  /* o body sempre vem com 8 de margim */
+  margin: 0;
+}
+
+h1 {
+  background: #84e;
+  padding: 20px;
+  border: 4px solid #111;
+  /* as margens se colidem, somente a margem maior vai funcionar */
+  margin: 40px;
+}
