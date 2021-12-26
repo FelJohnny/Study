@@ -1,1 +1,1 @@
-Repositorio com conteudos de estudo
+Repositorio com meus estudos diarios
