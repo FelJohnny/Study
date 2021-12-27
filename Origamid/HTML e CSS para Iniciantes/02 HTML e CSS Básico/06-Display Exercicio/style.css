@@ -1,0 +1,47 @@
+* {
+  font-family: Arial;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #b2b2b2;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #111;
+  text-align: center;
+}
+p {
+  color: #b2b2b2;
+  margin-bottom: 10px;
+}
+h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+span {
+  color: rgb(216, 184, 0);
+}
+div {
+  background: rgb(27, 26, 26);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.valor {
+  display: block;
+}
+
+button {
+  background-color: rgb(216, 184, 0);
+  height: 40px;
+  width: 130px;
+  border-radius: 5px;
+  color: rgb(49, 45, 45);
+  text-align: center;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
