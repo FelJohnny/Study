@@ -1,0 +1,12 @@
+span {
+  display: inline-block;
+  background: #ddd;
+}
+
+span {
+  padding: 30px;
+  padding: 20px 40px;
+  padding: 40px 100px 200px 10px;
+  margin: 40px 100px 200px 10px;
+  /* borda que aceita valores em sentido horario, ao inves de setar individualmente */
+}
