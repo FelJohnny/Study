@@ -2,8 +2,6 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap; /* evita quebra de tela*/
-  /* justify-content: center;  alinha conteudos ao centro*/
-  /* justify-content: space-between;  espacamentos */
 }
 
 h2 {
@@ -11,4 +9,5 @@ h2 {
   border: 1px solid #d7d7d7;
   padding: 20px;
   margin: 0px;
+  flex: 1;
 }
