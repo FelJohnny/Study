@@ -1,3 +1,7 @@
+body {
+  background: #706e6e;
+}
+
 .flex {
   display: flex;
   gap: 20px;
