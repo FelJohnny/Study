@@ -1,0 +1,49 @@
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.titulo {
+  grid-column: 1 /-1;
+}
+.info {
+  display: grid;
+  place-self: start;
+  place-items: start;
+  gap: 20px;
+}
+/* EStilos Gerais\\ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+}
+
+h1,
+p {
+  margin: 0px;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+p,
+span {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+.comprar {
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
