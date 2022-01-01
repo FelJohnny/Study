@@ -1,0 +1,48 @@
+.card {
+  border: 2px solid #ccc;
+  padding: 20px 20px 200px 20px;
+  margin: 40px;
+}
+
+.card2 {
+  border: 2px solid #ccc;
+  padding: 20px 20px 200px 20px;
+  margin: 40px;
+  position: relative;
+}
+span {
+  background: #e7e7e7;
+  border: 1px solid black;
+  padding: 10px;
+  top: -20px;
+  /* elemento se posiciona com base no elemento pai, continuando a ocupar o local inicial  */
+  position: relative;
+}
+
+.absolut {
+  background: #e7e7e7;
+  border: 1px solid black;
+  padding: 10px;
+  top: -30px;
+  position: absolute;
+  /* elemento deixa de existir no fluxo da tela, se posiciondo com base na tela(se o pai for position:relative ele se posiciona com base no pai) */
+}
+
+p {
+  background: #e7e7e7;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0px;
+  width: 93vh;
+}
+.fixed {
+  /* fixa o elemento com base na tela */
+  position: fixed;
+
+  left: 20px;
+  bottom: 10px;
+}
+body {
+  height: 600px;
+  margin: 0px;
+}
