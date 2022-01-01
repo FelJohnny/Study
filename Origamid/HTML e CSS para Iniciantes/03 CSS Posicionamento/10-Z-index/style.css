@@ -1,0 +1,20 @@
+h1 {
+  margin: 0px;
+  padding: 0px;
+  background-color: lightblue;
+}
+
+.index1 {
+  position: relative;
+  background: greenyellow;
+  top: 15px;
+  /* zindex so funciona com position */
+  z-index: -1;
+}
+
+.index2 {
+  position: relative;
+  background: rgb(148, 10, 136);
+  top: 10px;
+  z-index: 1;
+}
