@@ -1,4 +1,4 @@
-Para iniciar a utilizacao da propriedade precisamos de um container e aplicar a propriedade a mesma
+Para iniciar a utilizacao da propriedade precisamos de um container e aplicar a propriedade à mesma
 
 PROPRIEDADE DOS CONTAINERS:
 
