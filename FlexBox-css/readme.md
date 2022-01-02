@@ -30,19 +30,34 @@ justify-content: space-between; (cria um espacamento entre os elementos prenchen
 justify-content: space-around; )
 justify-content: space-evenly;
 
+---
+
 (funciona de forma parecida com justifycontent, porem com alteracoes em relacao a eixo TRANSVERSAL/VERTICAL (Y) do container)
+
 align-items: flex-start; (posiciona os elementos na parte superior do container)
+
 align-items: flex-end; (posiciona os elementos na parte inferior do container)
+
 align-items: center; (posiciona os elementos ao centro do container)
+
 align-items: stretch; (faz os conteudos preencherem todo o container verticalmente)
+
 align-items: baseline; ()
 
+---
+
 (alinha as LINHAS de um container removendo sensacao de espaco sobrando no eixo TRANSVERSAL/VERTICAL (Y))
+
 align-content: flex-start; (posiciona as linhas do container ao topo do mesmo)
+
 align-content: flex-end; (posiciona as linhas do container a parte inferior do container)
+
 align-content: center;
+
 align-content: stretch;
+
 align-content: space-between;
+
 align-content: space-around;
 
 ---
@@ -51,14 +66,14 @@ PROPRIEDADES DOS ITEMS:
 
 os items sao ordenados com base na forma que foram colocados no codigo
 
-## order: <integer>; (muda a ordem dos elementos no container)
+order: <integer>; (muda a ordem dos elementos no container)
 
-## flex-grow: <numero>; (define o espaco que o item ocupara do container)
+flex-grow: <numero>; (define o espaco que o item ocupara do container)
 
-## flex-shrink: <numero>; (defini a habilidade de incolher no container)
+flex-shrink: <numero>; (defini a habilidade de incolher no container)
 
-## flex-basis: ;
+flex-basis: ;
 
-## flex: none | [<'flex-grow'> <'flex-shrink'>? || <'flex-basis'>]
+flex: none | [<'flex-grow'> <'flex-shrink'>? || <'flex-basis'>]
 
-## align-self: auto | flex-start | flex-end | etc (alinha apenas um elemento no container utlizando atribudos iguais os align-items)
+align-self: auto | flex-start | flex-end | etc (alinha apenas um elemento no container utlizando atribudos iguais os align-items)
