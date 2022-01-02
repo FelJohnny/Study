@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: rgb(67, 90, 90);
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  /* justify-content: flex-end; */
+  /* justify-content: flex-start; */
+  justify-content: center;
+  /* justify-content: space-between;  para ter um espacamento adequando o ideal seria diminuir o container, ou usar margin*/
+  justify-content: space-around;
+  /* justify-content: stretch; */
+  /* align-items: stretch; */
+  /* align-items: center; */
+  align-content: space-around;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  border: solid 1px black;
+}
