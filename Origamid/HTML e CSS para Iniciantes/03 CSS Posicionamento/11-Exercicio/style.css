@@ -39,6 +39,14 @@ header {
   justify-content: center;
 }
 /* ---------------part1--------------------------- */
+.divisor {
+  background: #ee2211;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  left: 450px;
+}
+
 .part1 {
   width: 420px;
   background-color: white;
@@ -47,6 +55,7 @@ header {
   flex-wrap: wrap;
   align-content: center;
   justify-content: end;
+  position: relative;
 }
 
 .part1 h1 {
@@ -74,4 +83,7 @@ header {
 }
 .part2 img {
   max-width: 100%;
+}
+/* tentando quebrar essa linha do display flex, ia implementar algo como flex-direction: column */
+.conteudo2 {
 }
