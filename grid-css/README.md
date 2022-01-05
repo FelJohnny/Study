@@ -24,3 +24,18 @@
   -grid-row-start
   -grid-row-end
   -grid-area
+
+## GRID: ALINHAMENTOS
+
+6 propriedads para o alinhamento:
+
+1. `justify-content`
+2. `align-content`
+3. `justify-items`
+4. `align-items`
+5. `align-self`
+
+Vamos separa-los em 2 grupos
+
+1. `justify` e `align`
+2. `content`, `items` e `self`
