@@ -39,3 +39,11 @@ Vamos separa-los em 2 grupos
 
 1. `justify` e `align`
 2. `content`, `items` e `self`
+
+## JUSTIFY E ALIGN
+
+Sabendo que o grid é bidimencional, nós temos o eixo x e o y.
+
+O **eixo x** é o posicionamento horizontal, da esquerda para a direita.
+
+O **eixo y** é o posicionamento vertical, da esquerda para a direita.
