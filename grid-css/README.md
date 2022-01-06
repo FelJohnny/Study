@@ -18,12 +18,12 @@
 ### ITEMS
 
 - grid-column
-  -grid-column-start
-  -grid-column-end
-  -grid-row
-  -grid-row-start
-  -grid-row-end
-  -grid-area
+- grid-column-start
+- grid-column-end
+- grid-row
+- grid-row-start
+- grid-row-end
+- grid-area
 
 ## GRID: ALINHAMENTOS
 
