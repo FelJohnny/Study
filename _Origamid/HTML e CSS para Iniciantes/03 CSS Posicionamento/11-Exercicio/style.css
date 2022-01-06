@@ -9,8 +9,18 @@ body {
   background: #f7f7f7;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  justify-content: center;
+  grid-template-areas:
+    "h h"
+    "c c";
+}
+
 header {
   text-align: center;
+  grid-area: h;
 }
 
 .logo {
@@ -34,9 +44,14 @@ header {
 }
 /* ---------------conteudo--------------------------- */
 .conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  grid-area: c;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-areas:
+    "part1 part2"
+    "part3 part4";
+
+  width: 1000px;
 }
 /* ---------------part1--------------------------- */
 .divisor {
@@ -48,7 +63,7 @@ header {
 }
 
 .part1 {
-  width: 420px;
+  width: 440px;
   background-color: white;
   padding: 30px;
   display: flex;
@@ -56,6 +71,7 @@ header {
   align-content: center;
   justify-content: end;
   position: relative;
+  grid-area: part1;
 }
 
 .part1 h1 {
@@ -80,10 +96,19 @@ header {
 /* ---------------part2--------------------------- */
 .part2 {
   width: 500px;
+  grid-area: part2;
 }
 .part2 img {
   max-width: 100%;
 }
-/* tentando quebrar essa linha do display flex, ia implementar algo como flex-direction: column */
-.conteudo2 {
+
+/* ---------------part3--------------------------- */
+.part3 {
+  grid-area: part3;
+}
+
+/* ---------------part4--------------------------- */
+.part4 {
+  /* width: 420px; */
+  grid-area: part4;
 }
