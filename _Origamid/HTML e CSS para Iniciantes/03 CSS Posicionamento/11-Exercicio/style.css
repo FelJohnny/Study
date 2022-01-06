@@ -59,13 +59,14 @@ header {
   width: 60px;
   height: 5px;
   position: absolute;
-  left: 450px;
+  left: 469px;
+  top: 30px;
 }
 
 .part1 {
   width: 440px;
   background-color: white;
-  padding: 30px;
+  padding: 0px 30px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -75,7 +76,7 @@ header {
 }
 
 .part1 h1 {
-  margin: 50px 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .part1 p {
@@ -150,4 +151,15 @@ header {
 
 .part4_items h3 {
   grid-area: p4h3;
+}
+
+/* ---------------footer--------------------------- */
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px;
+  background: white;
+  text-align: center;
+  margin-top: 60px;
 }
