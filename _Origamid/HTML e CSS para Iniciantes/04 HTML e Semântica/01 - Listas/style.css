@@ -1,0 +1,15 @@
+body {
+  background: rgb(124, 153, 153);
+}
+
+h2 {
+  color: rgb(31, 50, 80);
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  /* list-style: square  url(); */
+  /* list-style: aside; */
+}
