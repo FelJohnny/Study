@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+  color: white;
+  background: blue;
+  display: inline-block;
+}
+
+p {
+  background: lightblue;
+}
+
+.px {
+  font-size: 24px;
+  padding: 16px 32px;
+}
+
+html {
+}
+.rem {
+  /*rem se basea na base do html (por base o html coloca a font como 16px sendo 16 1rem, mas pode ser alterado)calculo(  numero base do html ex16 dividido pelo numero de pixels que quer chegar ex24px = 1.5 */
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
