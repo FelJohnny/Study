@@ -1,0 +1,11 @@
+body {
+  margin: 0px;
+}
+
+div {
+  height: 40px;
+  background: teal;
+  /* 100vw pega 100 porcento da tela visivel, porem nao se adapta a margem do pai oque pode fazer estourar a tela */
+  width: 50vw;
+  height: 100vh;
+}
