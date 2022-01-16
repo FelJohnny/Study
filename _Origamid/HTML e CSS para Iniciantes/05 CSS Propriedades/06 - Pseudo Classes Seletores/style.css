@@ -1,0 +1,18 @@
+.lista-1 li:first-child {
+  background: blueviolet;
+}
+.lista-1 li {
+  background: #ffa;
+}
+
+.lista-1 li:last-child {
+  background: #cfa;
+}
+
+.lista-1 li:nth-child(3) {
+  background: brown;
+}
+
+.lista-2 li:nth-child(even) {
+  background: chartreuse;
+}
