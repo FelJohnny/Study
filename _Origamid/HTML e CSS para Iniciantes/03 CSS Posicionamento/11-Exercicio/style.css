@@ -26,6 +26,7 @@ header {
 .logo {
   margin-top: 50px;
 }
+
 /* ---------------nav--------------------------- */
 .nav {
   margin-top: 55px;
@@ -42,6 +43,7 @@ header {
   background: white;
   color: black;
 }
+
 /* ---------------conteudo--------------------------- */
 .conteudo {
   grid-area: c;
@@ -53,6 +55,7 @@ header {
 
   width: 1000px;
 }
+
 /* ---------------part1--------------------------- */
 .divisor {
   background: #ee2211;
@@ -99,6 +102,7 @@ header {
   width: 500px;
   grid-area: part2;
 }
+
 .part2 img {
   max-width: 100%;
 }
@@ -139,6 +143,7 @@ header {
   gap: 15px;
   margin-bottom: 30px;
 }
+
 .part4_items p {
   grid-area: p4p;
   font-size: 20px;
