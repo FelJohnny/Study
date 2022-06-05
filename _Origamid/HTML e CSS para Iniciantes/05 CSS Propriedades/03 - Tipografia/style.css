@@ -4,10 +4,13 @@ p {
   font-weight: bold;
   font-style: italic;
   line-height: 1.3;
+  /* autura da linha*/
   text-decoration: none;
   text-transform: capitalize;
-  text-indent: 3rem; /*aplica um paragrafo*/
+  text-indent: 3rem;
+  /*aplica um paragrafo*/
   text-align: left;
   text-shadow: 5px 5px 10px gray;
-  letter-spacing: 0.35rem; /*espacamento entre as letras*/
+  letter-spacing: 0.35rem;
+  /*espacamento entre as letras*/
 }
