@@ -1,0 +1,35 @@
+img {
+  max-width: 100%;
+  display: block;
+}
+
+div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+h1 {
+  grid-column: 1 / -1;
+
+}
+
+@media (max-width:600px) {
+
+  /*abaixo de 600px as alteracoes a seguir serao aplicadas*/
+  div {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    background-color: bisque;
+  }
+}
+
+@media (min-width:1000px) {
+
+  /*apartir de 1000 pixels as alteracoes a seguir serao aplicadas*/
+  html {
+    font-size: 150%;
+  }
+}
