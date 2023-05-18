@@ -1,0 +1,24 @@
+create table cidade(
+    id integer,
+    nome    varchar,
+    constraint pk_cidade primary key (id)
+);
+
+--
+
+create table aluno(
+    rgm integer,
+    nome varchar,
+    id_cidade integer,
+    constraint pk_aluno primary key (rgm),
+    constraint fk_cidade_id foreign key (id_cidade) references cidade(id)
+);
+
+insert into cidade values (1,'mogi'), (2,'suzano')
+insert into aluno values (123, 'maria',1),(456,'jose',2),(789,'luiz',1)
+
+select * from aluno
+
+select * from cidade
+
+select aluno.nome, cidade.nome from aluno, cidade where aluno.id_cidade = cidade.id

@@ -1,0 +1,127 @@
+create table aluno(
+    rgm integer,
+    nome varchar(100),
+    dt_nasc date,
+    constraint pk_aluno primary key (rgm)
+);
+drop table disciplina
+
+create table disciplina(
+    codigo  integer,
+    nome varchar(100),
+    numero_credito numeric,
+    constraint pk_disciplina primary key(codigo)
+);
+
+
+create table cursa (
+    disc_codigo integer,
+    alu_rgm     integer,
+    constraint pk_cursa primary key (disc_codigo, alu_rgm),
+    constraint fk_disc_cod foreign key (disc_codigo) references disciplina(codigo),
+    constraint fk_aluno_rgm foreign key (alu_rgm) references aluno(rgm)
+    
+);
+
+
+insert into aluno values (1,'johnny','2000-07-20')
+insert into aluno values (2,'wendy','2002-10-24')
+insert into aluno values (3,'felipe','2000-07-20')
+insert into aluno values (4,'clara','2000-07-20')
+insert into aluno values (5,'maria','2000-07-20')
+
+insert into disciplina values (1,'port',10)
+insert into disciplina values (2,'mat',30)
+insert into disciplina values (3,'cienc',50)
+insert into disciplina values (4,'bio',80)
+insert into disciplina values (5,'fisica',10)
+
+
+insert into cursa values(1, 2)
+insert into cursa values(2, 3)
+insert into cursa values(3, 3)
+insert into cursa values(4, 5)
+insert into cursa values(5, 1)
+select * from aluno
+-- Faça as alterações necessárias para que a coluna nome, de cada tabela, seja de preenchimento obrigatório
+alter table aluno alter column nome set not null
+alter table disciplina alter column nome set not null
+
+
+/*Escreva o comando que exibe uma listagem contendo: o nome e o número de créditos
+de todas as disciplinas cadastradas. Esta listagem deve aparecer em ordem decrescente
+pelo número de créditos. */
+
+select nome, numero_credito from disciplina order by  numero_credito desc, nome asc
+
+/*Adicione na tabela Aluno a coluna telefone. Esta coluna deve receber apenas
+números. 
+*/
+alter table aluno add column telefone integer
+
+select * from aluno
+
+/*Para cada aluno inserido, inclua seu número de telefone. 
+*/
+
+update aluno set telefone='11111111' where rgm between 1 and 5 --adcionou telefone nos 5
+
+select * from aluno
+
+/*7) Na tabela Aluno, modifique o nome da coluna dt_nasc para nascimento. */
+
+alter table aluno  rename column aluno to nascimento
+
+select * from aluno
+
+/* Na tabela Disciplina, remova a coluna numero_creditos.*/
+
+alter table disciplina drop column numero_credito
+
+/*Crie uma tabela chamada USUARIO. Esta tabela deverá armazenar, além da chave
+primária, o código do aluno, o login, a senha e o nível de acesso (nível 1, 2 ou 3). Cada
+aluno poderá ter mais de um usuário, porém de níveis de acesso diferentes. 
+*/
+
+drop table usuario
+create table usuario(
+    id integer,
+    aluno_rgm   integer,
+    login varchar(100),
+    senha varchar(100),
+    nivel_acesso integer check (nivel_acesso in(1,2,3)), --valida insercao de dado
+    constraint pk_usuario primary key (id),
+    constraint fk_alu_usuario foreign key (aluno_rgm) references aluno(rgm),
+    constraint uk_usuario unique (aluno_rgm,nivel_acesso)-- determina que ness tabela posso ter mais de um rgm por nivel de acesso
+);
+
+/*Desenhe o novo MER. */
+
+-- esta no trello 
+
+/*Escreva o comando que exibe uma listagem contendo: o nome e o telefone de todos
+os alunos. Esta listagem deve aparecer em ordem alfabética*/
+
+select nome,telefone from aluno order by nome
+
+
+/* Insira na tabela Usuario uma tupla referente a cada aluno cadastrado*/
+
+insert into usuario values(1,1,'login1','dagdjhgdjadg',3),
+                          (2,2,'login2','dagdjhgdjadg',3),
+                          (3,3,'login3','dagdjhgdjadg',2),
+                          (4,4,'login1','dagdjhgdjadg',1),
+                          (5,5,'login1','dagdjhgdjadg',1);
+                          
+select * from usuario
+
+/*) Escreva o comando que exibe o RGM e o login dos alunos com acesso de nível 3.
+O resultado deve estar em ordem crescente de RGM*/
+
+select aluno_rgm, login, nivel_acesso from usuario where nivel_acesso=3 order by aluno_rgm
+
+select * from usuario
+
+/*Na tabela Usuario, apague todos os registros dos usuários de acesso nível 1.*/
+
+delete from usuario where nivel_acesso=1
