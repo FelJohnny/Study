@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background: #f7f7f7;
+}
+
+.container{
+    width: 100vh;
+    margin: 0 auto;
+}
+
+header{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+img{
+    grid-column: 1 /-1;
+    padding: 50px 0;
+    justify-self: center;
+}
+
+nav{
+    grid-column: 1 /-1;
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+a{
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.corpo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,450px);
+    max-width: 100vh;
+    justify-content: center;   
+}
+
+.bloco-1{
+    height: 335px;
+    display: grid;
+    background: #ffffff;
+    place-content: center;
+    padding: 0 30px;
+    gap: 15px;
+    justify-items: end;
+}
+/* BLOCO 1*/
+.bloco-1 .botao1{
+    background: #ee2211;
+    color: #ffffff;
+    border-radius: 8px;
+    /*justify-self: end;*/
+}
+
+.bloco-1 h2{ 
+    text-align: right;
+    font-size: 32px;
+}
+
+.bloco-1 p{
+    text-align: right;
+    font-size: 20px;
+}
+/* BLOCO 1*/
+
+.bloco-2{
+    height: 335px;
+}
+
+.bloco-2 img{
+    max-width: 100%;
+    padding: 0;
+}
+
+.bloco-3{
+    display: grid;
+    justify-items: end;
+    text-align: end;
+    height: 335px;
+    align-items: center;
+    
+}
+
+.bloco-3 h1{
+    font-size: 64px;
+    color: #c6c6c6;
+}
+
+.bloco-4{
+    background: #ffffff;
+}
