@@ -7,12 +7,11 @@
 
 body{
     background: #f7f7f7;
+    display: grid;
+    justify-content: center;
 }
 
-.container{
-    width: 900px;
-    margin: 0 auto;
-}
+
 
 header{
     display: grid;
@@ -47,9 +46,12 @@ a{
 
 .corpo{
     display: grid;
-    grid-template-columns: repeat(auto-fit,450px);
-    max-width: 100vh;
-    justify-content: center;   
+    grid-template-columns: repeat(auto-fit,500px);
+    max-width: 1000px;
+    min-width: 500px;
+    justify-content: center;
+    
+    
 }
 
 .bloco-1{
