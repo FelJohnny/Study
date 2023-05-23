@@ -47,8 +47,9 @@ a{
 .corpo{
     display: grid;
     grid-template-columns: repeat(auto-fit,500px);
-    max-width: 1000px;
-    min-width: 500px;
+    width: 100vh;
+    max-width: 100vh;
+    min-width: 50vh;
     justify-content: center;
     
     
