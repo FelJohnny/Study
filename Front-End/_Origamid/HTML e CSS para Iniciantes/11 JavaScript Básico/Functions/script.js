@@ -39,3 +39,12 @@ function Funcao4(nome, horas){
 }
 
 console.log(Funcao4);
+
+
+const nome = "JavaScript"
+/* variaveis podem ser acessadas externamente da function, caso umavariavel com o mesmo nome seja declara dentro da func, a mesma sera priorizada */
+function logCurso(){
+    console.log(nome);
+}
+
+logCurso();
