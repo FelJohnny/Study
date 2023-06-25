@@ -19,3 +19,16 @@ function Mousemovimenta(evento){
 window.addEventListener("mousemove",Mousemovimenta)
 
 
+
+
+
+//jeito mais eficiente de rodar o codigo acima
+
+//busco a classe circulo do meu html do lado de fora da funcao
+const circulo = document.querySelector(".circulo");
+
+function Mousemovimenta(evento){
+    //altero minha classe circulo aplicando o top e left em seus atributos
+    circulo.style.top = evento.y + "px";
+    circulo.style.left = evento.x + "px"
+};
