@@ -27,3 +27,5 @@ console.log(texto.clientHeight);
 /*transforma em maiusculo */
 
 console.log(Filme.nome.toUpperCase());
+
+

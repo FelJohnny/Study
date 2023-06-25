@@ -15,7 +15,7 @@ function Funcao2(nome){
 }
 
 Funcao2("Johnny");
-
+//
 
 function Funcao3(nome, horas){
     console.log(nome, horas, "horas");
