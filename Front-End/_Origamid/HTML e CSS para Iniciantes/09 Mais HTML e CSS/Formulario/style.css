@@ -14,3 +14,7 @@ input{
     background: #ccc;
     border:  2px solid;
 }
+
+button{
+    display: block;
+}
