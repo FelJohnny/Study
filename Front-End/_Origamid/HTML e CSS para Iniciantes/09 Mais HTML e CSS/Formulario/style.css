@@ -18,3 +18,21 @@ input{
 button{
     display: block;
 }
+
+div{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+select{
+    margin: 0;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button{
+    cursor: pointer;
+    padding: 20px 30px;
+}
