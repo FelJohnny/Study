@@ -1,0 +1,40 @@
+[required]{
+    border: 2px solid tomato;
+}
+
+a[href="#contato"]{
+    border: 1px solid green;
+}
+
+[href^="#"]{ /* o ^ acento circunflexo indica "quando comecar com"* e terminar com seria com $*/
+    background: teal;
+    color: white;
+}
+
+
+section  > h2{
+    color: red;
+}
+
+
+p{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+article{
+    background: lightgreen;
+    padding: 10px;
+}
+
+
+/*article p:last-child{
+    margin-bottom: 0px;
+}*/
+
+/*ou*/
+
+p + p {
+    /*aplicaria apenas se tivesse um P antes*/
+    margin: 10px;
+}
