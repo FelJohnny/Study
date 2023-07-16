@@ -1,0 +1,48 @@
+
+html{
+    --cor-favorita:teal;/*faz funcionar a todos abaixo da tag html*/
+}
+/*or*/
+
+@media (prefers-color-scheme: light){ /*aplica ao identificar tema do windows*/
+    :root{
+    --fundo: #fff;
+    --texto-1: #111;
+    --texto-2: #444; 
+    }    
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+    --fundo: #222;
+    --texto-1: #111;
+    --texto-2: #444; 
+    }
+}
+:root{
+    /*aplica igual o de cima mas tambem aplica em SVG*/
+    --borda: 4px solid blue;
+    --fonte-grande: 3rem;
+  
+}
+
+body{
+    font-size: 1.2rem;
+    background: var(--fundo);
+}
+
+h1 {
+    --cor-favorita: teal;
+    color: var(--cor-favorita);
+    border: var(--borda);
+    font-size: var(--fonte-grande);
+
+}
+
+
+p{
+    font-size: calc(var(--fonte-grande)/ 2); /*aplicando calculo ex: dividindo por dois, fazendo com q seeu alterar a variavel ele altera respeitando o padrao*/
+    color: var(--cor-favorita);/*a variavel so funcionou aqui pois a mesma esta declarada no pai html*/
+    margin-top: var(--fonte-grande);
+}
+
+
