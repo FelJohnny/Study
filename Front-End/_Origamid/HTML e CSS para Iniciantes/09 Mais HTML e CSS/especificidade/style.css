@@ -1,0 +1,24 @@
+body{
+    font-size: 2rem;
+}
+
+
+.titulo{
+    color: tomato;
+    padding: 10px;
+}
+
+
+#produtos{ /*especificidade maior*/
+    color: antiquewhite;
+}
+
+/* a quantidde de conjunto de especificidades tera prioridade  (maior)id, class, tag(menor)*/
+.titulo.teste {
+    color: red;
+}
+
+
+h2{
+    color: blue !important;  /* !important ignora toda especificidade*/
+}
