@@ -5,8 +5,29 @@
 }
 
 
+:root{
+    --cor-primaria: #e21;
+    --cor-primaria-escura: #900;
+
+    --backgroud-1: #f7f7f7;
+    --background-2: #fff;
+
+    --texto-1: #000;
+    --borda: #c6c6c6;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --backgroud-1: #3d3d3d;
+        --background-2: #000;
+        --texto-1: #fff;
+        --borda: #1f1e1e;
+    }
+}
+
+
 body{
-    background: #f7f7f7;
+    background: var(--backgroud-1);    
     display: grid;
     justify-content: center;
 }
@@ -17,6 +38,7 @@ header{
     display: grid;
     place-content: center;
     grid-template-columns: repeat(4, 1fr);
+    
 }
 
 
@@ -36,21 +58,21 @@ nav{
 }
 
 a{
-    background: #ffffff;
-    border: 1px solid #ececec;
+    background: var(--background-2);
+    border: 1px solid var(--borda);
     border-radius: 8px;
     padding: 15px 25px;
     text-decoration: none;
-    color: black;
+    color: var(--texto-1);
 }
 
 .corpo{
     display: grid;
-    grid-template-columns: repeat(auto-fit,500px);
-    width: 100vh;
-    max-width: 100vh;
-    min-width: 50vh;
+    grid-template-columns: repeat(auto-fit,500px); 
+    margin: 0 auto;
+    max-width: 1000px;
     justify-content: center;
+    color: var(--texto-1);
     
     
 }
@@ -58,7 +80,7 @@ a{
 .bloco-1{
     height: 335px;
     display: grid;
-    background: #ffffff;
+    background: var(--background-2);
     place-content: center;
     padding: 0 30px;
     gap: 15px;
@@ -66,12 +88,15 @@ a{
 }
 /* BLOCO 1*/
 .bloco-1 .botao1{
-    background: #ee2211;
-    color: #ffffff;
+    background: var(--cor-primaria);
+    color: var(--background-2);
     border-radius: 8px;
     /*justify-self: end;*/
 }
 
+.bloco-1 .botao1:hover{
+    background: var(--cor-primaria-escura);
+}
 .bloco-1 h2{ 
     text-align: right;
     font-size: 32px;
@@ -94,7 +119,6 @@ a{
 
 .bloco-3{
     display: grid;
-    justify-items: end;
     text-align: end;
     height: 335px;
     align-items: center;
@@ -103,9 +127,26 @@ a{
 
 .bloco-3 h1{
     font-size: 64px;
-    color: #c6c6c6;
+    color: var(#c6c6c6);
 }
 
 .bloco-4{
-    background: #ffffff;
+    background: var(--background-2);
+}
+
+
+
+@media (max-width:1000px ){
+    .corpo{
+        max-width: 500px;
+    }
+
+    .bloco-3 h1{
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .nav{
+        justify-content: center;
+    }
 }
