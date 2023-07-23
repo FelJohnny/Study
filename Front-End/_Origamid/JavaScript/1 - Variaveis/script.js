@@ -17,7 +17,7 @@ console.log(totalpreco);
 var sobrenome = 'Felipe',
     cidade="suzano";
 
-    /*----------------------- */
+    /*------------------------ */
 
 
 var semdefinir
