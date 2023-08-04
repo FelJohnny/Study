@@ -17,11 +17,15 @@
     <label for="senha">Senha</label></br>
     <input type="password" name="senha" id="senha"></br>
     
+    <input type="checkbox" name="genero[]" >Masculino<br>
+    <input type="checkbox" name="genero[]">Feminino<br>
+    <input type="checkbox" name="genero[]">Outro <br>
+    <input type="checkbox" name="genero[]">prefiro naao informar <br>
+    <input type="submit" name="acao" value="enviar">
     <select name="linguagens" id="">
         <option value="1">portugues</option>
         <option value="2">ingles</option>
-    </select>
-    <input type="submit" name="acao" value="enviar">
+    </select><br>
     </form>
 </body>
 
@@ -31,6 +35,11 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $linguagem = $_POST['linguagens'];
+        foreach($_POST['genero'] as $key => $genero){
+            echo $key;
+            echo $genero;
+        };
+
         
         echo '</br>';
         echo $nome;
@@ -40,6 +49,8 @@
         echo $senha;
         echo '</br>';
         echo $linguagem;
+        echo '</br>';
+        echo $genero;
 
 
 
