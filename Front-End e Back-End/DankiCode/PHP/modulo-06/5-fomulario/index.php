@@ -30,7 +30,7 @@
 </body>
 
 <?php
-    if(isset($_POST['acao'])){ // com POST fica oculto no url e é enviado dinamicamente para o servidor
+    if(isset($_POST['acao'])){ // com POST ao inves de GET as informações ficam oculto no url e é enviado dinamicamente para o servidor
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
