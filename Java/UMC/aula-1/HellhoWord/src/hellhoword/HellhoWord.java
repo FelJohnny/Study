@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HellhoWord {
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);//objeto de entrada
         
         System.out.println("Ola mundo"); //ola mundo
         
@@ -13,6 +13,7 @@ public class HellhoWord {
         for(double i = 0; i < 2;i++){        
             System.out.println("Digite x");
             double x = entrada.nextDouble();//entrada de dado via teclado 
+            
             System.out.println("Digite y");
             double y = entrada.nextDouble();
         
