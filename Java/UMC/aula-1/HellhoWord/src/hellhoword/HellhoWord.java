@@ -18,7 +18,6 @@ public class HellhoWord {
             double y = entrada.nextDouble();
         
             double resultado = x+y;
-            System.out.println(i);
             System.out.println("Soma:"+ resultado );
         
         }
@@ -27,24 +26,27 @@ public class HellhoWord {
         double n1 = entrada.nextDouble();
         System.out.println("digite  o numero 2");
         double n2 = entrada.nextDouble();
-        System.out.println("Selecione a operação entre + - / *");
+        System.out.println("Selecione a operação entre 1- soma,  2- subtração, 3- divizao, 4-multiplicação");
         
-        String op = entrada.next();
+         int op = entrada.nextInt();
          double result =0;
-        if(op == "+"){
+         
+        if(op == 1){
             result = n1+n2;
             System.out.println("o resultado da soma é: "+result);
            
-        }else if(op =="-"){
+        }else if(op == 2){
             result = n1-n2;
              System.out.println("o resultado da subtração é: "+result);
             
-        }else if(op =="/"){
+        }else if(op == 3){
         result = n1/n2;
         System.out.println("o resultado da divizão é: "+result);
-        }else if(op =="*"){
+        
+        }else if(op == 4){
         result = n1*n2;
         System.out.println("o resultado da multiiplicação é: "+result);
+        
         }else{
             System.out.println("nao é uma operação");
         }
