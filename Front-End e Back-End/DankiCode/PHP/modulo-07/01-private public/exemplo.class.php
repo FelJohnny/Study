@@ -1,23 +1,34 @@
 <?php
 class pessoa
 {
-    public $nome = 'johnny';
+    public $nome;
     public $idade = 23;
     private $altura = 1.76;
 
     public function crescer()
     {
-        echo 'estou crescendo <br>';
+        echo "esta crescendo <br>";
         $this->comer(); //chamando o metodo privado
     }
-    private function comer() // estando private esse metodo não pode ser acessado de fora da classe
+
+    // estando private esse metodo não pode ser acessado de fora da classe
+    //statico não pode ser alterado pelo objeto, sempre sera  isso, só pode ser alterado pela propria classe
+    private static function comer()
     {
-        echo 'estou comendo';
+        echo 'esta comendo<br><br>';
+    }
+
+
+    public function setpessoa($nome)
+    {
+        $this->nome = $nome;
+    }
+    public function getpessoa()
+    {
+        return $this->nome;
     }
 }
 
-$pessoa = new pessoa;
 
-$pessoa->crescer();
 
 ?>
