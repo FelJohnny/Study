@@ -22,6 +22,15 @@ public class PodCast extends Audio{
     }
 
     @Override
+    public int getClassificacao() {
+        if(getTotalCurtidas() > 10){
+            return 5;
+        }else{
+            return 2;
+        }
+    }
+
+    @Override
     public void Ficha() {
         System.out.println("Apresentador: " + getApresentador());
         System.out.println("Descrição: " + getDescricao());
