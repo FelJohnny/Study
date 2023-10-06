@@ -21,13 +21,13 @@ public class Principal {
 
 
         //Reproduzindo a musica
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 50; i++) {
             musica.reproduz();
             podCast.reproduz();
         }
 
         //curtindo a musica
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 10; i++) {
             musica.curte();
             podCast.curte();
         }

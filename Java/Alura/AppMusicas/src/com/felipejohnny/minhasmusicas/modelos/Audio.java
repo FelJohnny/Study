@@ -26,7 +26,6 @@ public class Audio {
     }
 
     public int getClassificacao() {
-        classificacao = TotalCurtidas / totalReproducao;
         return classificacao;
     }
 

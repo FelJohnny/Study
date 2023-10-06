@@ -31,6 +31,11 @@ public class Musica extends Audio{
     }
 
     @Override
+    public int getClassificacao() {
+        if()
+    }
+
+    @Override
     public void Ficha() {
         System.out.println("Cantor: " + getCantor());
         System.out.println("Album: " + getAlbum());
