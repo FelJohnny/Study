@@ -20,4 +20,11 @@ public class PodCast extends Audio{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    @Override
+    public void Ficha() {
+        System.out.println("Apresentador: " + getApresentador());
+        System.out.println("Descrição: " + getDescricao());
+        super.Ficha();
+    }
 }

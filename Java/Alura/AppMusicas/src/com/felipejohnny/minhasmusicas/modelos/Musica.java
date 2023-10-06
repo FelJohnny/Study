@@ -29,4 +29,12 @@ public class Musica extends Audio{
     public void setCantor(String cantor) {
         this.cantor = cantor;
     }
+
+    @Override
+    public void Ficha() {
+        System.out.println("Cantor: " + getCantor());
+        System.out.println("Album: " + getAlbum());
+        System.out.println("Genero: " + getGenero());
+        super.Ficha();
+    }
 }

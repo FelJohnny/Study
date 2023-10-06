@@ -2,9 +2,11 @@ package com.felipejohnny.minhasmusicas.modelos;
 
 public class Audio {
     private String titulo;
-    private int totalDeReproducao;
+    private int duracaoEmMinutos;
+    private int totalReproducao;
+    private int totalDeReproducaoMinutos;
+    private int classificacao;
     private int TotalCurtidas;
-    private double classificacao;
 
 
     public String getTitulo() {
@@ -15,16 +17,25 @@ public class Audio {
         this.titulo = titulo;
     }
 
-    public int getTotalDeReproducao() {
-        return totalDeReproducao;
+    public int getTotalDeReproducaoMinutos() {
+        return totalDeReproducaoMinutos;
     }
 
     public int getTotalCurtidas() {
         return TotalCurtidas;
     }
 
-    public double getClassificacao() {
+    public int getClassificacao() {
+        classificacao = TotalCurtidas / totalReproducao;
         return classificacao;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     public void curte(){
@@ -32,6 +43,19 @@ public class Audio {
     }
 
     public void reproduz(){
-        this.totalDeReproducao++;
+        for (int i = 0; i < duracaoEmMinutos; i++) {
+            this.totalDeReproducaoMinutos++;
+        }
+        totalReproducao++;
+    }
+    public void Ficha(){
+
+        System.out.println("Titulo: " + getTitulo());
+        System.out.println("Duração: " + getDuracaoEmMinutos() + " minutos");
+        System.out.println("No total foi reproduzido " + getTotalDeReproducaoMinutos() + " minutos");
+        System.out.println("Classificação " + getClassificacao() + " estrelas");
+        System.out.println("Total de curtidas: " + getTotalCurtidas());
+        System.out.println("***************************");
+
     }
 }
