@@ -23,10 +23,17 @@ public class PodCast extends Audio{
 
     @Override
     public int getClassificacao() {
+<<<<<<< HEAD
         if(getTotalDeReproducaoMinutos() >= 45 ){
             return 5;
         }else{
             return 0;
+=======
+        if(getTotalCurtidas() > 10){
+            return 5;
+        }else{
+            return 2;
+>>>>>>> b97d405c5b4f1e010007c1579c790a77e1eed165
         }
     }
 
