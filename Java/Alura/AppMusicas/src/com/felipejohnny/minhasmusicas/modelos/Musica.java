@@ -32,7 +32,11 @@ public class Musica extends Audio{
 
     @Override
     public int getClassificacao() {
-        if()
+        if(getTotalCurtidas() >= 10){
+            return 5;
+        }else{
+            return 3;
+        }
     }
 
     @Override
