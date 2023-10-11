@@ -1,10 +1,18 @@
 
 
-var x = 5;
-var y = 10;
-x += y; // x = x + y (15)
-x -= y; // x = x - y (-5)
-x *= y; // x = x * y (50)
-x /= y; // x = x / y (0.5)
-x %= y; // x = x % y (0)
-x **= y; // x = x ** y (9765625)
+var videoGames = ['Switch', 'PS4', 'XBox'];
+
+videoGames[0] // Switch
+videoGames[2] // Xbox
+
+// MÉTODOS E PROPRIEDADES DE UMA ARRAY
+
+console.log(" videoGames.pop() Remove o último item e retorna ele: ");
+console.log(videoGames.pop()); // Remove o último item e retorna ele
+
+console.log( + " videoGames.push('3DS') adiciona ao final da array: ")
+videoGames.push('3DS')
+console.log(videoGames); // Adiciona ao final da array
+
+
+videoGames.length; // quantidade de itens no array 3
