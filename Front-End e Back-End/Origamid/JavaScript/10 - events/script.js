@@ -136,11 +136,3 @@ body.forEach((item)=>{
 })
 // Se o usuário clicar na tecla (t), aumente todo o texto do site. 
 
-
-function aumentaFonte(e){
-    if(e.key ==='t'){
-        console.log(e.target.style.backgroud="red")
-    }
-}
-
-document.addEventListener('keydown',aumentaFonte);
