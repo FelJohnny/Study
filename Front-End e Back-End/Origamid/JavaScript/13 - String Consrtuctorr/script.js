@@ -32,15 +32,22 @@ function visualiza(){
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 console.log('Utilizando o foreach na array abaixo, some os valores de Taxa e os valores de Recebimento:');
-let soma = 0;
+let somaTaxa = 0;
+let somaRecebimento = 0;
 
 function somaValor(){
   transacoes.forEach(element => {
-    let a = parseInt(element.valor.slice(3)); //parseint
-    soma += a;
-    
+    if(element.descricao.slice(0, 4) === 'Taxa'){
+
+      let valorLimpo = parseInt(element.valor.slice(3)); //parseint
+      somaTaxa += valorLimpo;
+    }else if(element.descricao.slice(0, 4) === 'Rece'){
+      let valorLimpo = parseInt(element.valor.slice(3)); //parseint
+      somaRecebimento += valorLimpo;
+    }
   });
-  console.log('A soma dos valores das trasações é: '+ soma)
+  console.log('A soma dos valores das Taxas são: '+ somaTaxa)
+  console.log('A soma dos valores das Recebimento são: '+ somaRecebimento)
 }
 somaValor();
 
