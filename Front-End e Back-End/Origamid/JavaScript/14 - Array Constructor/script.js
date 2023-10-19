@@ -25,17 +25,30 @@ estudantes.reverse();
 console.log(estudantes);
 
 console.log("Verifique se Joana faz parte dos estudantes");
- console.log(estudantes.includes('Joana');
-// Verifique se Juliana faz parte dos estudantes
+console.log(estudantes.includes('Joana'));
+console.log("Verifique se Juliana faz parte dos estudantes");
+console.log(estudantes.includes('Juliana'));
+
 
 let html = `<section>
               <div>Sobre</div>
               <div>Produtos</div>
               <div>Contato</div>
             </section>`
-// Substitua section por ul e div com li,
-// utilizando split e join
+console.log("Substitua section por ul e div com li, utilizando split e join")
+console.log(html);
+html = html.split('section').join('ul').split('div').join('li');
+console.log(html);;
 
+
+
+console.log("Remova o último carro, mas antes de remover, salve a array original em outra variável: ")
 const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
-// Remova o último carro, mas antes de remover
-// salve a array original em outra variável
+
+carros2 = carros.slice();
+console.log("original alterado: ");
+carros.pop();
+carros.shift();
+console.log(carros)
+console.log('copia:')
+console.log(carros2)
