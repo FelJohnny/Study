@@ -97,6 +97,7 @@ function criaTag(tag, classe, conteudo){
 }
 criaTag('div','teste')
 
+
 console.log("Crie uma nova função utilizando a anterior como base essa nova função deverá sempre criar h1 com a classe titulo. Porém o parâmetro conteudo continuará dinâmico");
 
 const criaTitulo = criaTag.bind(null, 'h1','titulo');
