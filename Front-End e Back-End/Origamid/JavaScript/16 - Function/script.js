@@ -18,16 +18,6 @@ const filtro = Array.prototype.filter.call(li, (item) => {
 filtro; // Retorna os itens que possuem ativo
 console.log(filtro)
 
-
-const arrayLike = {
-  0: "item1",
-  2: "item2",
-  3: "item3",
-  4: "item4",
-  length: 4,
-
-}
-
 console.log("Retorne a soma total de caracteres dos parágrafos acima utilizando reduce");
 
 
@@ -95,3 +85,20 @@ acelerarHonda(200, 10);
 
 
 //----------------------------------------------------------------------------------------------------------------------------//
+
+
+console.log("Crie uma função que retorne novos elementos html, com os seguintes parâmetros: tag, classe e conteudo.");
+
+function criaTag(tag, classe, conteudo){
+  const elemento = document.createElement(tag);
+  classe ? elemento.classList.add(classe) : '';
+  conteudo ? elemento.innerHTML = conteudo : '';
+  console.log(elemento)
+}
+criaTag('div','teste')
+
+console.log("Crie uma nova função utilizando a anterior como base essa nova função deverá sempre criar h1 com a classe titulo. Porém o parâmetro conteudo continuará dinâmico");
+
+const criaTitulo = criaTag.bind(null, 'h1','titulo');
+
+criaTitulo('tag H1 criada de forma instanciada de outra funcão');
