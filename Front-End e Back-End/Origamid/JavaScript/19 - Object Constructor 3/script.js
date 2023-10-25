@@ -34,3 +34,9 @@ console.log("Com typeOf: ");
 console.log(typeof li); // object
 console.log("Com toString: ");
 console.log(li.toString());
+console.log("em alguns casos como em arrays e afins não é mostrado o tipo corretamente, por isso usar o .call");
+console.log("Com toString:  ");
+const array = ['item1', 'item2'];
+console.log(li.toString());
+console.log("Com o Object.prototype.toString.call: ");
+console.log(Object.prototype.toString.call(array));
