@@ -9,9 +9,6 @@ const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
 
-  li{
-    list-style: none;
-  }
 `
 
 function Header(){
