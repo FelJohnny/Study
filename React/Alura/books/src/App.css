@@ -3,8 +3,3 @@
   height: 100vh;
   background-image: linear-gradient(90deg,rgb(5, 88, 88), rgb(10, 163, 184));
 }
-
-.App-header{
-  background-color: #e7e7e7;
-  display: flex;
-}
