@@ -6,8 +6,7 @@ import { livros } from "./dadosPesquisa"
 const PesquisaContainer = styled.section`
     color: #FFF;
     text-align: center;
-    padding: 85px 0;
-    height: 270px;
+    padding: 85px 0;   
     width: 100%; 
     background-image: linear-gradient(90deg,rgb(5, 88, 88), rgb(10, 163, 184));
 `
@@ -16,13 +15,13 @@ const Subtitulo = styled.h3`
         font-weight: 500;
         margin-bottom: 40px;
 `
-const Titulo = styled.h2`
+export const Titulo = styled.h2`
         color: #FFF;
         font-size: 36px;
         text-align: center;
         width: 100%;
 `
-const ContainerLivros = styled.div`
+export const ContainerLivros = styled.div`
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
@@ -32,7 +31,8 @@ const ContainerLivros = styled.div`
 `
 const Livro = styled.div`
     cursor:pointer;
-    transition: 500ms ease-in-out; 
+    transition: 500ms ease-in-out;
+    width: 209px;
 
     &:hover{
         transform: scale(1.1)
