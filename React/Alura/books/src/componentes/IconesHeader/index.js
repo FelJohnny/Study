@@ -5,9 +5,10 @@ const icones = [sacola, perfil]
 
 const ListaIcones = styled.ul`
   display: flex;
+  gap: 15px;
 `
 const Icone = styled.li`
-  margin-right: 40px;
+  
   width: 25px;
   cursor: pointer;
 `

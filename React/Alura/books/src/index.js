@@ -12,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
+    background-image: linear-gradient(90deg,rgb(5, 88, 88), rgb(10, 163, 184));
   }
 
   code {

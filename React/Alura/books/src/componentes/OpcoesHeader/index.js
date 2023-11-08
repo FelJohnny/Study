@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 const ListaOpcoes = styled.ul`
   display: flex;
+
+  @media(max-width: 770px){
+    flex-direction: column;
+  }
 `
 const Opcoes = styled.li`
   display: flex;
