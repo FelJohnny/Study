@@ -1,4 +1,7 @@
 import livro from '../../imagens/livro.png';
+import Modal from '../Modal';
+import { useState } from "react";
+
 
 
 export const livros = [
@@ -17,7 +20,9 @@ onclick = function(evento){
 
         if(evento.target.getAttribute("class")){ //valida se a imagem selecionada possui uma classe
             if(cliq.includes("imgLivro")){ // se a classe dessa imagem é "imgLivro"
-                console.log("Esse é um livro")
+                return(
+                <Modal></Modal>
+                )
             }else{
                 console.log("não é um livro")
             }

@@ -47,7 +47,6 @@ function Pesquisa(){
                         <img 
                             src={livro.src}
                             className="imgLivro"
-                            
                         />
                         <p>{livro.nome}</p>
                     </Livro>
