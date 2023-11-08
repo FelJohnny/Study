@@ -1,5 +1,6 @@
 import {livros} from './dadosUltimosLancamentos'
-import Pesquisa, { ContainerLivros, Titulo } from '../Pesquisa';
+import Pesquisa, { ContainerLivros} from '../Pesquisa';
+import { Titulo } from '../Titulo';
 import styled from 'styled-components';
 
 export const Livro = styled.section`
@@ -15,8 +16,8 @@ export const Livro = styled.section`
 function UltimosLancamento(){
     return(
         <section>
-            <Titulo>Ultimos Lancamento</Titulo>
             <ContainerLivros>
+            <Titulo color=''>Ultimos Lancamento</Titulo>
                 {livros.map(livro =>(
                     <Livro>
                         <img src={livro.src}/>

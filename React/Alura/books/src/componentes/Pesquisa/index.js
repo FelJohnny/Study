@@ -2,6 +2,7 @@ import Input from "../Input";
 import styled from "styled-components";
 import { useState } from "react";
 import { livros } from "./dadosPesquisa"
+import { Titulo } from "../Titulo";
 
 const PesquisaContainer = styled.section`
     color: #FFF;
@@ -14,12 +15,6 @@ const Subtitulo = styled.h3`
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 40px;
-`
-export const Titulo = styled.h2`
-        color: #FFF;
-        font-size: 36px;
-        text-align: center;
-        width: 100%;
 `
 export const ContainerLivros = styled.div`
     display:flex;
