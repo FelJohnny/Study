@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { livros } from "./dadosPesquisa"
 import { Titulo } from "../Titulo";
+import { Livro } from "../Livro";
 
 const PesquisaContainer = styled.section`
     color: #FFF;
@@ -24,15 +25,6 @@ export const ContainerLivros = styled.div`
     margin-top: 80px;
     
 `
-const Livro = styled.div`
-    cursor:pointer;
-    transition: 500ms ease-in-out;
-    width: 209px;
-
-    &:hover{
-        transform: scale(1.1)
-    }
-`
 
 function Pesquisa(){
     const [livrosPesquisados, setLivrosPesquisados] = useState(['']);
@@ -49,9 +41,14 @@ function Pesquisa(){
                 }}
             />
             <ContainerLivros>
-                {livrosPesquisados.map(livro =>(
+                {livrosPesquisados.map((livro)=>(
                     <Livro>
-                        <img src={livro.src}/>
+                        
+                        <img 
+                            src={livro.src}
+                            className="imgLivro"
+                            
+                        />
                         <p>{livro.nome}</p>
                     </Livro>
                 ))}

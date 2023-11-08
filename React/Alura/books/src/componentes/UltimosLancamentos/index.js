@@ -1,18 +1,9 @@
 import {livros} from './dadosUltimosLancamentos'
-import Pesquisa, { ContainerLivros} from '../Pesquisa';
-import { Titulo } from '../Titulo';
-import styled from 'styled-components';
+import { ContainerLivros} from '../Pesquisa';
+import { Titulo } from '../Titulo'
+import { Livro } from '../Livro';
 
-export const Livro = styled.section`
-    color: #FFF;
-    text-align: center;
-    cursor:pointer;
-    transition: 500ms ease-in-out;
-    width: 209px;
 
-    &:hover{
-        transform: scale(1.1)
-`
 function UltimosLancamento(){
     return(
         <section>
@@ -20,7 +11,10 @@ function UltimosLancamento(){
             <Titulo color=''>Ultimos Lancamento</Titulo>
                 {livros.map(livro =>(
                     <Livro>
-                        <img src={livro.src}/>
+                        <img 
+                            src={livro.src}
+                            className="imgLivro"
+                             />
                         <p>{livro.nome}</p>
                     </Livro>
                     ))}
