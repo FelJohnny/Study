@@ -20,9 +20,7 @@ onclick = function(evento){
 
         if(evento.target.getAttribute("class")){ //valida se a imagem selecionada possui uma classe
             if(cliq.includes("imgLivro")){ // se a classe dessa imagem é "imgLivro"
-                return(
-                <Modal></Modal>
-                )
+                console.log('é um livro')
             }else{
                 console.log("não é um livro")
             }
