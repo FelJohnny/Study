@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Carrega o React, React Dom e Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Adicionando React</title>
+</head>
+<body>
+    <div id="root"></div> <!--ID: ROOT-->
+    
+    <script type="text/babel"> // babel transforma JSX em JS
+
+        const Button = ()=>{
+            return <button>Click</button>
+        }
+
+        const MainNav = ()=>{
+            return (
+                <nav>
+                    <a href="#">Link 1</a>    
+                    <Button/>
+                </nav>
+            )
+        }
+
+        function handleClick(event){
+            console.log(event.target)
+            console.log(event.target.innerHTML)
+        }
+
+        const Produtos = ()=>{
+            const produto1 = 'Camisa';
+            const produto2 = 'Calça';
+            return(
+                <div>
+                    <button onClick={handleClick}>{produto1}</button>
+                    <button onClick={handleClick}> {produto2}</button>
+                </div> 
+            )
+        }
+
+        const Compras = ()=>{
+
+            const [contar, setContar] = React.useState(1)
+
+            function Comprar(){
+                setContar(contar *2)
+            }
+
+            return(
+                <div>
+                    <button onClick={Comprar}>Comprar: {contar}</button>
+                    <p>Total {contar}</p>
+                    <p>Total {contar * 10}</p>
+
+                </div>
+            )
+        }
+        
+        function App(){ //pagina principal a ser renderizada dentro de Root
+            return (
+                <div>
+                    <MainNav/>
+                    <br/>
+                    <Produtos/>
+                    <h1>USE STATES</h1>
+                    <Compras/>
+                </div>
+            )
+        }
+
+        const container = document.getElementById('root'); //chamando a div com id="root"
+        const root = ReactDOM.createRoot(container); // 'ReactDOM, vem da biblioteca 'react-dom@18', adicionando a variavel 'container' em root
+        root.render(<App/>) //apartir desse ponto a função 'App' sera renderizada dentro de root
+
+    </script>
+</body>
+</html>
