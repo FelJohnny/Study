@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Carrega o React, React Dom e Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Adicionando React</title>
+</head>
+<body>
+    <div id="root"></div> <!--ID: ROOT-->
+    
+    <script type="text/babel"> // babel transforma JSX em JS
+
+        function Button(){ //componente botão
+            
+            const [total, setTotal] = React.useState(0);
+
+            return <button onClick={() => setTotal(total+1)}> adicionar {total}</button>
+        }
+
+        function App(){ //pagina principal a ser renderizada dentro de Root
+            return (
+                <div>
+                    <Button/> {/*chamando o componente Button, criado como function*/}
+                    <Button/>
+                    <Button/>
+                </div>
+            )}
+
+        const container = document.getElementById('root'); //chamando a div com id="root"
+        
+        const root = ReactDOM.createRoot(container); // 'ReactDOM, vem da biblioteca 'react-dom@18', adicionando a variavel 'container' em root
+        
+        root.render(<App/>) //apartir desse ponto a função 'App' sera renderizada dentro de root
+
+    </script>
+</body>
+</html>
