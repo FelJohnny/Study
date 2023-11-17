@@ -30,18 +30,26 @@ const Exercicio = ()=>{
 
       const dados = luana;
 
+
+    const transform = dados.compras
+    .map((item) => Number(item.preco.replace('R$ ', '')))
+    
+    const total = transform.reduce((a,b) => a+b)
+
+
     return(
         <>
-        
+
+          <h1></h1>
             <h3>Cliente: {dados.cliente}</h3>
             <h3>Idade: {dados.idade}</h3>
             <h3>Compras:</h3>
             <h3>{dados.compras.map( item => (
-              <li>{item.nome}</li>
+              <li>{item.nome}: {item.preco}</li>
             ))}</h3>
-            <h3>Cliente Ativo:{dados.ativa === true? <p>true</p>: <p>false</p> }</h3>
-            
-            
+            <h3>Cliente Ativo:{dados.ativa === true ? <p style={{color: "green"}}>true</p>: <p style={{color: 'red'}}>false</p> }</h3>
+              <h3>Total Gasto: {total}</h3>
+              {total > 10000? <h3>GASTOU MAIS QUE 10MIL REAIS :O</h3>: <h3>gastou menos que 10mil</h3>}
         </>
     )
 }
