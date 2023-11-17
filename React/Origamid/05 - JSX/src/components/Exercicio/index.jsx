@@ -30,11 +30,16 @@ const Exercicio = ()=>{
 
       const dados = luana;
 
-      let nome = dados.cliente == "Luana" ? nome = luana : nome = mario;
     return(
         <>
         
-            <h1>Exercicio</h1>
+            <h3>Cliente: {dados.cliente}</h3>
+            <h3>Idade: {dados.idade}</h3>
+            <h3>Compras:</h3>
+            <h3>{dados.compras.map( item => (
+              <li>{item.nome}</li>
+            ))}</h3>
+            <h3>Cliente Ativo:{dados.ativa === true?<p>true</p>: <p>false</p> }</h3>
             
             
         </>
