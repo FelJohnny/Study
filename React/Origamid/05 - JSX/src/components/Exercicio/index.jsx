@@ -39,7 +39,7 @@ const Exercicio = ()=>{
             <h3>{dados.compras.map( item => (
               <li>{item.nome}</li>
             ))}</h3>
-            <h3>Cliente Ativo:{dados.ativa === true?<p>true</p>: <p>false</p> }</h3>
+            <h3>Cliente Ativo:{dados.ativa === true? <p>true</p>: <p>false</p> }</h3>
             
             
         </>
