@@ -36,7 +36,7 @@ const retorno = promessaAsync
     retorno.profissao ='Ti'
     return retorno
 })
-.then(retorno => 'teste')// sobrescreve apos execucao na promiseResult ficara 'teste'
+.then(retorno => 'teste')// sobrescreve apos execucao do then acima e promiseResult ficara 'teste'
 
 
 console.log(retorno) //antes dos 2secs a promisse 'promessaAsync' fica como pending
