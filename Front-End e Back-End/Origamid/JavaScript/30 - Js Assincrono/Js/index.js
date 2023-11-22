@@ -41,5 +41,31 @@ const retorno = promessaAsync
 
 console.log(retorno) //antes dos 2secs a promisse 'promessaAsync' fica como pending
 
-//-------------------------------------------------------//
+//--------------------------all-----------------------------//
 
+const login = new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve('usuario logado')
+    },1000)
+})
+
+const dados = new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve('Dados carregados')
+    },1500)
+})
+
+
+const carregouTudo = Promise.all([login, dados]);
+
+carregouTudo.then(resolucao => console.log(resolucao)) //retorna uma array
+
+
+
+//----------------------------race--------------------------
+
+const carregouPrimeiro = Promise.race([login, dados]); // retorna o primeiro retorno da promise
+
+carregouPrimeiro.then(resposta =>{
+    console.log(resposta)
+})
