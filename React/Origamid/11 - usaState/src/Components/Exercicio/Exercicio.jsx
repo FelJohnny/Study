@@ -6,21 +6,37 @@
 // Ao clicar no botão faça um fetch a api e mostre os dados do produto na tela.
 // Mostre apenas um produto por vez
 // Mostre a mensagem carregando... enquanto o fetch é realizado
+import { useState } from 'react'
 import './Exercicio.css'
+import React from 'react'
+import Botao from './Botao'
+
 
 
 const Exercicio = (props)=>{
 
+    const [botao, setBotao] = useState()
+
+    function buscaAPI(){
+        
+        fetch('https://ranekapi.origamid.dev/json/api/produto/tablet')
+        .then(response => response.json())
+        .then(body => {
+            
+            
+        })
+    }
 
 
+    
 
     return(
         <>
             <h3>Selecione um produto</h3>
             <div className='Exercicio'>
-                <button className='botao'>Produto 1</button>
-                <button className='botao'>Produto 2</button>
-                <button className='botao'>Produto 3</button>
+                <Botao setBotao={setBotao} botao={botao} value ={"tablet"}/>
+                <Botao setBotao={setBotao} botao={botao} value ={"smartphone"}/>
+                <Botao setBotao={setBotao} botao={botao} value ={"notebook"}/>
             </div>
         </>
     )
