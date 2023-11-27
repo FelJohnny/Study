@@ -4,12 +4,16 @@
     justify-content: center;
     margin: 20px 0;
     gap: 30px;
+    flex-wrap: wrap;
     
-}
-.botao{
 }
 
 
 h3{
     text-align: center;
+}
+
+.produto{
+    display: grid;
+    justify-content: center;
 }

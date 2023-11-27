@@ -9,35 +9,37 @@
 import { useState } from 'react'
 import './Exercicio.css'
 import React from 'react'
-import Botao from './Botao'
+import Produto from './Produto'
 
 
 
-const Exercicio = (props)=>{
+const Exercicio = ()=>{
 
-    const [botao, setBotao] = useState()
+    const [carregando, setCarregando] = useState(null)
+    const [dados, setDados] = React.useState(null);
 
-    function buscaAPI(){
+    async function buscaAPI(event){
+        setCarregando(true)
+        const resposta = fetch(`https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText}`)
+        const json = await (await resposta).json()         
+        setTimeout(()=>{
+            setDados(json);
+            setCarregando(false);
+        },1000)
         
-        fetch('https://ranekapi.origamid.dev/json/api/produto/tablet')
-        .then(response => response.json())
-        .then(body => {
-            
-            
-        })
     }
-
-
     
-
     return(
         <>
             <h3>Selecione um produto</h3>
             <div className='Exercicio'>
-                <Botao setBotao={setBotao} botao={botao} value ={"tablet"}/>
-                <Botao setBotao={setBotao} botao={botao} value ={"smartphone"}/>
-                <Botao setBotao={setBotao} botao={botao} value ={"notebook"}/>
+                <button onClick={buscaAPI}>tablet</button>
+                <button onClick={buscaAPI}>smartphone</button>
+                <button onClick={buscaAPI}>notebook</button>
+                {carregando && <p>carregando...</p>}
+                <br />
             </div>
+                {!carregando && dados && <Produto dados={dados}/>}
         </>
     )
 }
