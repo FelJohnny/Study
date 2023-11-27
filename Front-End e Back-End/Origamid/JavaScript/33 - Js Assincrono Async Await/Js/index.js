@@ -45,3 +45,30 @@ console.log('Depois de 1s');
 }
 iniciarAsync();
   
+
+//-------------CEP----------------/
+
+const cepInserido = document.getElementById('cepInput')
+const botao = document.getElementById('button')
+const retornoCep = document.querySelector('.cepBody')
+
+async function buscaCEP(event){
+    try{
+
+        event.preventDefault()
+        const cep = cepInserido.value
+        const responseCep = fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        console.log(responseCep)
+        const cepJson = await (await responseCep).text()
+        console.log(responseCep)
+
+        console.log(cepJson)
+        retornoCep.innerText = cepJson
+            
+        
+    }catch{
+        console.log(Error("deu erro"))
+    }
+}
+
+botao.addEventListener('click', buscaCEP)
