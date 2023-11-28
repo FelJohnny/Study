@@ -8,25 +8,21 @@ function Produto(props){
 
 
      useEffect(()=>{
-
          if(props.prodPreferencia !== null){
              setCarregando(true)      
              fetch(`https://ranekapi.origamid.dev/json/api/produto/${props.prodPreferencia}`)
              .then(response => response.json()) 
              .then(json => {
-                 setTimeout(()=>{
-                    console.log(json)
-                     
+                 setTimeout(()=>{             
                      setDados(json)
                      setCarregando(false)
-                     console.log(dados)
                     },1000)
                 })
             }
         },[props.prodPreferencia])
             
     
-        if(dados !== null)
+    if(dados !== null)
     return(
         
         <div>
