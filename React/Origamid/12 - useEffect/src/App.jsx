@@ -6,50 +6,41 @@
 // Quando o usuário entrar no site, se existe um produto no localStorage, faça o fetch do mesmo
 
 
-import React, { memo, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Produto from "./components/Produto/Produto"
+
 
 function App() {
 
-  const [carregando, setCarregando] = useState(false)
-  const [dados, setDados] = useState(null)
+  const [prodPreferencia, setProdPreferencia] = useState(null)
   
+    useEffect(()=>{// valida se contem produto no localStorage, se conter ele adiciona o produto de Preferencia
+      const prodPrefLocal = window.localStorage.getItem('produto')
+      if(prodPrefLocal !== null){
+        setProdPreferencia(prodPrefLocal)
+      }
+       },[])
 
-    async function buscaAPI(event){
-      
-      setCarregando(true)
-      const produtoText = event.target.innerText
-      const Produto = fetch(`https://ranekapi.origamid.dev/json/api/produto/${produtoText}`)
-      const json = await (await Produto).json()
-      setTimeout(()=>{
-        setCarregando(false)
-        setDados(json)
-      },1000)
+
+    useEffect(()=>{ //valida se prodPreferencia está vazio, se conter dados ele adiciona o dado.nonme no localstorage
+      if(prodPreferencia !== null){
+        window.localStorage.setItem('produto', prodPreferencia)
+
+      }
+    },[prodPreferencia])
+
+    function handleclick(event){
+      setProdPreferencia(event.target.innerText)
     }
-    
-
-    useEffect(()=> {
-      const MemoriaProduto = window.localStorage.getItem('produto')
-      if(MemoriaProduto !== null){
-        setDados(MemoriaProduto)
-      }
-    })
-
-    useEffect(()=>{ //executa quando o estado "dados" for chamado
-      if(dados !== null){ //se dados for diferente de vazio executa
-        window.localStorage.setItem('produto', dados) // seta no local storage do navegador a chave 'produto' com valor dados.nome
-      }
-    },[dados])
-  
-
       
   return (
 
     <>
-      <button onClick={buscaAPI}>notebook</button>
-      <button onClick={buscaAPI}>smartphone</button>
-      {carregando ? 'Carregando..' : ''}
-      {!carregando && dados && <Produto dados={dados} /> }
+      <h2>Preferencia: {prodPreferencia}</h2>
+      <button onClick={handleclick}>notebook</button>
+      <button onClick={handleclick}>smartphone</button>
+      <Produto prodPreferencia={prodPreferencia}/>
+      
     </>
 
   );
