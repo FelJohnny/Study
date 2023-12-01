@@ -13,7 +13,8 @@ const Produdo = ()=>{
             <ul>
                 {global.produto.map((produto, index)=><li key={index}>{produto.nome} Preço: {produto.preco}</li>)}
                 
-            </ul>}
+            </ul>
+        }
             <button onClick={global.limpaDados}>Limpar Busca</button>
         </>
     )
