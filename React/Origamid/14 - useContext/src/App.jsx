@@ -4,7 +4,7 @@
 import React from "react";
 import ConteudoUsuario from "./components/ConteudoUsuario/ConteudoUsuario";
 import Produto from "./components/Produto/Produto";
-
+import Produto2 from "./components/Produto/Produto2";
 import { GlobalStorage } from "./components/GlobalContext/GlobalContext";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 
       {/*Exemplo real:*/}
       <GlobalStorage>
-        <Produto/>
+        <Produto2/>
       </GlobalStorage>
 
     </>

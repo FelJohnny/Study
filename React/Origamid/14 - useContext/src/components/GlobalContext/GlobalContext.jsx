@@ -1,10 +1,16 @@
-import React from "react";
-import { createContext } from "react";
+import React, { useState, createContext } from "react";
+
 
 export const GlobalContext = createContext()
 
 export const GlobalStorage = ({children})=>{
 
-    return <GlobalContext.Provider>{children}</GlobalContext.Provider>
+    const [carrinho, setCarrinho] = useState(0);
+
+    return(
+        <GlobalContext.Provider value={{carrinho, setCarrinho}}>
+            {children}
+        </GlobalContext.Provider>
+    )
 
 }
