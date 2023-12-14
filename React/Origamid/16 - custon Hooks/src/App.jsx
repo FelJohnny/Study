@@ -11,6 +11,7 @@ function App() {
   return (
     <>
       <h2>Custom Hooks</h2>
+      <p>produto armazenado : {produto}</p>
       <button onClick={handleclick}>book</button>
       <button onClick={handleclick}>tablet</button>
     </>
