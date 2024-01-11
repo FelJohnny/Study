@@ -4,6 +4,8 @@ import { GlobalContext } from "../GlobalContext/GlobalContext";
 const Produdo = ()=>{
 
     const global = useContext(GlobalContext)
+
+    if(global.produto!== null)//executa apenas apos o fetch
     console.log(global.produto)
     
     
