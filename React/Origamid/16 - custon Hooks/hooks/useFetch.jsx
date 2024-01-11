@@ -12,19 +12,21 @@ const useFetch = ()=>{
     
     const request = async (url,options)=>{
         try{
+            setError(null)
             setLoading(true)
             response = await fetch(url,options)
             json = await response.json()
             setTimeout(()=>{
-                setLoading(false)
                 setData(json)
-            },500)
-        }catch(error){
-            setError(error)
+            })
+        }catch(erro){
+            setError('erro ao buscar API')
+        }finally{
+            setLoading(false)
         }
     }
 
-    return{data, error, loading, request, error}
+    return{data, error, loading, request}
 }
 
 export default useFetch
