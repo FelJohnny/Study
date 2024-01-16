@@ -1,0 +1,13 @@
+
+.titulo{
+    color: teal;
+}
+
+.preco{
+    color:red;
+}
+
+.btn{
+    padding: 5px 24px;
+    cursor: pointer;
+}
