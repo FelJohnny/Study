@@ -3,19 +3,18 @@ import { NavLink } from "react-router-dom";
 import HeaderCss from './Header.module.css'
 
 const Header = () =>{
+    console.log(HeaderCss)
     return(
-        <header>
-            <nav>
-                <ul>
+            <nav className={HeaderCss.nav}>
+                <ul >
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink className={HeaderCss.btnNav} to="/">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="contato">Contato</NavLink>
+                        <NavLink className={HeaderCss.btnNav} to="contato">Contato</NavLink>
                     </li>
                 </ul>
             </nav>
-        </header>
     )
 }
 
