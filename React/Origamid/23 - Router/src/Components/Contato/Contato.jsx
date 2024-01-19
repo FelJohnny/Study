@@ -10,7 +10,7 @@ import Rafael from "../Pessoas/Rafael";
 const Contato = ()=>{
     const params = useParams();
     return(
-        <>
+        <section className='animationleft'>
                 <h1>Contato</h1>
                 <nav>
                     <NavLink to='johnny'>Johnny</NavLink>{' '}
@@ -20,7 +20,7 @@ const Contato = ()=>{
                     <Route path="johnny" element={<Johnny/>}/>
                     <Route path="rafael" element={<Rafael/>}/>
                 </Routes>
-        </>
+        </section>
     )
 }
 
