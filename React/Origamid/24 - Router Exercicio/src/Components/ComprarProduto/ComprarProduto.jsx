@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ComProdutoCss from './ComProdutoCSS.module.css'
 import { useParams } from "react-router-dom";
+import Head from "../Head/Head";
 
 const ComprarProduto = ()=>{
     const [produto, setProduto]=useState(null)
@@ -29,21 +30,23 @@ const ComprarProduto = ()=>{
     if(error) return <p>error</p>
     if(produto !== null)
     return(
-        <div className={ComProdutoCss + ' animationLeft'}>
-            
-            <h1>{produto.nome}</h1>
-                
+        <section className={ComProdutoCss.containerProduto + ' animationLeft'}>
+            <Head titulo={`Loja | ${produto.nome}`} description={`Loja | ${produto.descricao}`}/>
+            <div className={ComProdutoCss.listaImagem}>
                 {produto.fotos.map((imagem) =>(
                     <img 
-                     src={imagem.src}
-                     alt={imagem.descricao}
-                     key={imagem.titulo}
-                     className=""
+                    src={imagem.src}
+                    alt={imagem.descricao}
+                    key={imagem.titulo}
                     />
                 ))}
-                
-
-        </div>
+            </div>
+            <div className={ComProdutoCss.conteudoProduto}>
+                <h1>{produto.nome}</h1>
+                <p>Preço: {produto.preco}</p>
+                <p>Descrição: {produto.descricao}</p>
+            </div>
+        </section>
     )
 }
 

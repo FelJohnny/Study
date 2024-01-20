@@ -1,0 +1,21 @@
+.containerProduto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+}
+
+.listaImagem {
+    height: 600px;
+    overflow: scroll;
+}
+
+.listaImagem img{
+    width: 100%;
+}
+
+.conteudoProduto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
