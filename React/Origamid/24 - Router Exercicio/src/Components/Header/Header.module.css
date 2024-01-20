@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     height: 50px;
     align-items: center;
+    justify-content: center;
 }
 
 .nav li{
@@ -17,6 +18,11 @@
 .btnNav{
     background-color: rgb(0, 70, 70);
     color: white;
-    padding: 5px 15px;
+    padding: 10px 20px;
     border-radius: 6px;
+}
+
+.btnNav:hover{
+    background-color: rgb(0, 95, 95);
+
 }

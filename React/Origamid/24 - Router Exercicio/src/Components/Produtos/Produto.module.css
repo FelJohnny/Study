@@ -1,0 +1,25 @@
+.listProd{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.containerProd img{
+    width: 250px;
+    border-radius: 10px;
+}
+
+.containerProd h3{
+    color: black;
+}
+.containerProd{
+    cursor: pointer;
+    padding: 5px;   
+}
+
+.containerProd:hover{
+    background-color: #eee;
+    transition: .3s;
+    border-radius: 10px;
+}

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import HeaderCss from './Header.module.css'
 
 const Header = () =>{
-    console.log(HeaderCss)
     return(
             <nav className={HeaderCss.nav}>
                 <ul className="container">
