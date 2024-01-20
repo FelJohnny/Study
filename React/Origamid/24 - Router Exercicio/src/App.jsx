@@ -6,16 +6,18 @@ import Contato from './Components/Contato/Contato'
 import Header from './Components/Header/Header'
 
 function App() {
-  
+  console.log(document.title)
 
   return (
     <>
     <BrowserRouter>
       <Header/>
-      <Routes>
-        <Route path="" element={<Produto/>}/>
-        <Route path="contato" element={<Contato/>}/>
-      </Routes>
+      <div className='container'>
+        <Routes>
+          <Route path="" element={<Produto/>}/>
+          <Route path="contato" element={<Contato/>}/>
+        </Routes>
+      </div>
     </BrowserRouter>
     </>
   )

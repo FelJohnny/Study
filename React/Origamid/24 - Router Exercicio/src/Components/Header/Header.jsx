@@ -6,7 +6,7 @@ const Header = () =>{
     console.log(HeaderCss)
     return(
             <nav className={HeaderCss.nav}>
-                <ul >
+                <ul className="container">
                     <li>
                         <NavLink className={HeaderCss.btnNav} to="/">Home</NavLink>
                     </li>

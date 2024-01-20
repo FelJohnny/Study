@@ -5,15 +5,15 @@
 
 .nav ul{
     display: flex;
-    height: 40px;
-    justify-content: center;
+    flex-wrap: wrap;
+    height: 50px;
     align-items: center;
-
 }
 
 .nav li{
     margin-right: 20px;
 }
+
 .btnNav{
     background-color: rgb(0, 70, 70);
     color: white;

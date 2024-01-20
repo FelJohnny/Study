@@ -4,4 +4,30 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container section{
+    padding-top: 20px;
+}
+
+.animationLeft{
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: animeLeft .3s forwards;
+}
+
+@keyframes animeLeft {
+    to{
+        transform: initial;
+        opacity: 1;
+
+    }
+    
 }
