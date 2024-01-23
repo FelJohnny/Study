@@ -37,6 +37,7 @@ function Pesquisa(){
                 onBlur={evento => {
                     const textoDigitado = evento.target.value;
                     const resultadoPesquisa = livros.filter( livro => livro.nome.includes(textoDigitado))
+                    console.log(resultadoPesquisa)
                     setLivrosPesquisados(resultadoPesquisa)
                 }}
             />

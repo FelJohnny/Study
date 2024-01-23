@@ -1,14 +1,15 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./Slide.module.css"
 
 const Slide = ({slides})=>{
 
-    const [ativo, setAtivo]=useState(0)
+    
     const [position, setPosition]=useState(0)
     const SlidePosition = useRef()
 
     function slidePrev(){
         const {width} = SlidePosition.current.getBoundingClientRect()
+        console.log(width)
         setPosition(position + width)
     }
     function slideNext(){
