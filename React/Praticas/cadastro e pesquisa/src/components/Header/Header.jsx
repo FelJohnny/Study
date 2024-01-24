@@ -22,7 +22,7 @@ const ItemLista = styled.li`
   transition: transform 0.3s;
   &:hover {
     background-color: #016969;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
 `
@@ -32,6 +32,7 @@ const StyledNavLink = styled(NavLink)`
   padding: 10px 25px;
   background-color: #004949;
   border-radius:5px;
+  
   &:focus,
   &:active {
     outline: none;  
@@ -39,7 +40,6 @@ const StyledNavLink = styled(NavLink)`
 
   } 
 `
-console.log(Nav)
 const Header = () => {
   return (
       <Nav>
@@ -48,10 +48,7 @@ const Header = () => {
                 <StyledNavLink to='/'>Home</StyledNavLink>
             </ItemLista>
             <ItemLista>
-                <StyledNavLink to='/cadastrar'>Cadastrar</StyledNavLink>
-            </ItemLista>
-            <ItemLista>
-                <StyledNavLink to='/pesquisa'>Pesquisa</StyledNavLink>
+                <StyledNavLink to='/entidade'>Entidade</StyledNavLink>
             </ItemLista>
         </Lista>
       </Nav>

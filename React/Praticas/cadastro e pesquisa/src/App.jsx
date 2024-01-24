@@ -6,6 +6,7 @@ import Cadastrar from "./components/Cadastrar/Cadastrar"
 import Pesquisa from "./components/Pesquisa/Pesquisa"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { GlobalStorage } from "./components/GlobalContext/GlobalContext"
+import Entidade from "./components/Entidade/Entidade"
 
 function App(){
 
@@ -16,8 +17,8 @@ function App(){
           <Header/>
           <Routes>
             <Route path="" element={<Home/>}/>
-            <Route path="cadastrar" element={<Cadastrar/>}/>
-            <Route path="pesquisa" element={<Pesquisa/>}/>
+            <Route path="entidade/*" element={<Entidade/>}/>
+
           </Routes>
         </BrowserRouter>
       </GlobalStorage>
