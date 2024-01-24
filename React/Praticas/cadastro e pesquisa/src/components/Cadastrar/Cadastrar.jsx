@@ -19,19 +19,21 @@ const Cadastrar = ()=>{
 
     function handleSubmit(event){
         event.preventDefault();
-        setEntidade([...entidade,form])        
+        setEntidade([...entidade,form])         
+        setForm({        
+            nome:'',
+            idade:'',
+            nota1:'',
+        })
     }
 
-    useEffect(()=>{
-      // console.log(form)
-    },[form])
     useEffect(()=>{
         console.log(entidade)
     },[entidade])
 
     return(
         <section>
-            <h1>cadastrar</h1>
+            <h1>cadastrar Entidade</h1>
             <form onSubmit={handleSubmit}>
                 <input 
                     placeholder="nome"

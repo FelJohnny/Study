@@ -19,13 +19,24 @@ const Pesquisa = () => {
         value={pesquisa} 
         onChange={({target})=> setPesquisa(target.value)}
       />
+        <table >
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Nota</th>
+            </tr>
+          </thead>
       {filtrado.map(pessoa =>(
-        <div key={pessoa.nome}>
-          <h1>{pessoa.nome}</h1>
-          <h2>{pessoa.idade}</h2>
-          <h2>{pessoa.nota1}</h2>
-        </div>
+        <tbody key={pessoa.nome}>
+          <tr>
+            <td>{pessoa.nome}</td>
+            <td>{pessoa.idade}</td>
+            <td>{pessoa.nota1}</td>
+          </tr>
+        </tbody>
       ))}
+      </table>
     </div>
   )
 }

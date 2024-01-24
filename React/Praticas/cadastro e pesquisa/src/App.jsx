@@ -1,8 +1,9 @@
 import React from "react"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Header from "./components/Header/Header"
+import Home from "./components/Home/Home"
 import Cadastrar from "./components/Cadastrar/Cadastrar"
 import Pesquisa from "./components/Pesquisa/Pesquisa"
-import Header from "./components/Header/Header"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { GlobalStorage } from "./components/GlobalContext/GlobalContext"
 
 function App(){
@@ -11,9 +12,10 @@ function App(){
     <>
       <GlobalStorage>
         <BrowserRouter>
-          <Header />
+          <Header/>
           <Routes>
-            <Route path="" element={<Cadastrar/>}/>
+            <Route path="" element={<Home/>}/>
+            <Route path="cadastrar" element={<Cadastrar/>}/>
             <Route path="pesquisa" element={<Pesquisa/>}/>
           </Routes>
         </BrowserRouter>
