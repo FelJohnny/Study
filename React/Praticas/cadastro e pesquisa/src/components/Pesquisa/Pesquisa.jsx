@@ -13,7 +13,17 @@ const Section = styled.section`
 `
 const InputPesquisa = styled.input`
   width:80%;
-  height:20px
+  height:20px;
+  padding: 5px 12px;
+  font-size:1.2rem;
+  border-radius:10px;
+`
+const Table = styled.table`
+  &>thead>tr>th{
+    background:red;
+    padding-top:20px;
+    width:1000px;
+  }
 `
 
 const Pesquisa = () => {
@@ -31,10 +41,11 @@ const Pesquisa = () => {
       <h1>Entidade</h1>
       <InputPesquisa 
         type="text" 
-        value={pesquisa} 
+        value={pesquisa}
+        placeholder='Digite o Nome'
         onChange={({target})=> setPesquisa(target.value)}
       />
-        <table >
+        <Table >
           <thead>
             <tr>
               <th>Nome</th>
@@ -51,7 +62,7 @@ const Pesquisa = () => {
           </tr>
         </tbody>
       ))}
-      </table>
+      </Table>
     </Section>
   )
 }
