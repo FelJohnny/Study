@@ -4,19 +4,18 @@ import styled from 'styled-components'
 
 const Nav = styled.nav`
   display:flex;
-  align-items:center;
   background-color: teal;
-  height:60px;
-
-`
+  `
 const Lista = styled.ul`
   display:flex;
+  flex-wrap:wrap;
   gap: 20px;
-  margin: 0 auto;
-  max-width:1000px;
+  margin:0 auto;
+  width:1000px;
+  height:60px;
+  align-items:center;
   justify-content:center;
   list-style: none;
-
 `
 const ItemLista = styled.li`
   transition: transform 0.3s;
@@ -38,7 +37,13 @@ const StyledNavLink = styled(NavLink)`
     outline: none;  
     background-color: #2b9c9c;
 
-  } 
+  }
+
+  &.active{
+    background-color: #2b9c9c;
+    font-weight: bold;
+    text-decoration:underline
+  }
 `
 const Header = () => {
   return (
@@ -49,6 +54,9 @@ const Header = () => {
             </ItemLista>
             <ItemLista>
                 <StyledNavLink to='/entidade'>Entidade</StyledNavLink>
+            </ItemLista>
+            <ItemLista>
+                <StyledNavLink to='/financeiro'>Financeiro</StyledNavLink>
             </ItemLista>
         </Lista>
       </Nav>

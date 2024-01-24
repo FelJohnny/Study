@@ -5,7 +5,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-nav ul li .active{
-    background-color: #2b9c9c;
-
+#root{
+    background-color: #a8c4c4;
 }
+
+

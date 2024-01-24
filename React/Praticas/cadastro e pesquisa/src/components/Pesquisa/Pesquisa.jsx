@@ -1,5 +1,20 @@
 import React, { useContext, useState } from 'react'
 import { GlobalContext } from '../GlobalContext/GlobalContext'
+import styled from 'styled-components'
+
+
+const Section = styled.section`
+  padding: 20px 50px;
+  &>h1{
+    font-size:2rem;
+    padding-bottom:20px;
+
+  }
+`
+const InputPesquisa = styled.input`
+  width:80%;
+  height:20px
+`
 
 const Pesquisa = () => {
 
@@ -12,9 +27,9 @@ const Pesquisa = () => {
   })
 
   return (
-    <div>
-      <h1>Pesquisa</h1>
-      <input 
+    <Section>
+      <h1>Entidade</h1>
+      <InputPesquisa 
         type="text" 
         value={pesquisa} 
         onChange={({target})=> setPesquisa(target.value)}
@@ -37,7 +52,7 @@ const Pesquisa = () => {
         </tbody>
       ))}
       </table>
-    </div>
+    </Section>
   )
 }
 

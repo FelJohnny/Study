@@ -1,6 +1,16 @@
 import React, {useContext, useEffect, useState} from "react";
 import { GlobalContext } from "../GlobalContext/GlobalContext";
+import styled from "styled-components";
 
+
+
+const Section = styled.section`
+  padding: 20px 50px;
+  &>h1{
+    font-size:2rem;
+    padding-bottom:20px;
+  }
+`
 const Cadastrar = ()=>{
 
     const {entidade, setEntidade} = useContext(GlobalContext)
@@ -32,8 +42,8 @@ const Cadastrar = ()=>{
     },[entidade])
 
     return(
-        <section>
-            <h1>cadastrar Entidade</h1>
+        <Section>
+            <h1>Cadastro de Entidade</h1>
             <form onSubmit={handleSubmit}>
                 <input 
                     placeholder="nome"
@@ -67,7 +77,7 @@ const Cadastrar = ()=>{
                 />
                 <button >Cadastrar</button>
             </form>
-        </section>
+        </Section>
     )
 }
 
