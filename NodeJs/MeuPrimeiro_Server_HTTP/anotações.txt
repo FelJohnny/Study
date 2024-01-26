@@ -1,0 +1,49 @@
+--------------------------------------
+
+npm init -y // cria o arquivo package.json
+
+--------------------------------------
+
+adicionar o seguinte no package.json 
+
+Explicação: type "module": Isso indica que o projeto usa a sintaxe de módulo ES6. Com essa configuração, os arquivos JavaScript são tratados como módulos ES6 por padrão. Isso significa que você pode usar as importações e exportações de ES6 diretamente no seu código.
+
+{
+  "type": "module"
+}
+
+--------------------------------------
+CRIANDO SEM BIBLIOTECAS EXTERNAS
+
+CRIANDO SERVIDOR:
+
+const server = http.createServer((req, res)=>{
+    
+})
+
+const server = http.createServer((req, res) => { ... });: Este método cria um servidor HTTP. Ele recebe uma função de callback que será executada sempre que uma requisição HTTP for feita para esse servidor. A função de callback recebe dois argumentos: req (a requisição HTTP recebida) e res (a resposta que será enviada de volta para o cliente).
+
+res.writeHead(200, {"Content-type": "text/plain"});: Este método define o cabeçalho da resposta HTTP. O código de status 200 indica que a requisição foi bem-sucedida. O cabeçalho Content-type: text/plain especifica que o conteúdo da resposta será do tipo texto simples.
+
+res.end("Resposta do servidor");: Este método finaliza a resposta HTTP e envia o conteúdo especificado de volta para o cliente. Neste caso, a resposta é simplesmente "Resposta do servidor".
+
+--------------------------------------
+
+server.listen(PORT, ()=>{
+    console.log("servidor escutando");
+});
+
+server.listen(PORT, ...): Este método é utilizado para iniciar o servidor. Ele faz com que o servidor comece a escutar por conexões em uma porta específica. O parâmetro PORT é a variável que contém o número da porta em que o servidor deve escutar. A variável PORT precisa ser definida anteriormente no código.
+
+() => { console.log("servidor escutando"); }: Este é um callback que será chamado quando o servidor estiver escutando conexões com sucesso. O código dentro da função de callback será executado quando o servidor estiver pronto para receber conexões. Neste caso, o código simplesmente imprime "servidor escutando" no console, indicando que o servidor foi iniciado com sucesso e está pronto para receber solicitações.
+
+--------------------------------------
+
+BIBLIOTECA QUE ATUALIZA O SERVIDOR EM FULLTIME
+
+npm install nodemon
+
+adicionar no package.json:   "scripts": {
+    "dev": "nodemon server.js",
+}
+--------------------------
