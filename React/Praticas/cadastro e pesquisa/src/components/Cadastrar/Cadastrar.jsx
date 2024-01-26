@@ -11,14 +11,35 @@ const Section = styled.section`
     padding-bottom:20px;
   }
 `
+
+const Input = styled.input`
+  display:block;
+  width:80%;
+  height:20px;
+  padding: 5px 12px;
+  margin-bottom: 10px;
+  font-size:1.2rem;
+  border:0;
+  border-radius:10px;
+`
+const Button = styled.button`
+  color: white;
+  padding: 10px 25px;
+  background-color: #004949;
+  border-radius:5px;
+  cursor: pointer;
+  
+`
 const Cadastrar = ()=>{
 
     const {entidade, setEntidade} = useContext(GlobalContext)
 
     const [form, setForm]=useState({
         nome:'',
-        idade:'',
-        nota1:'',
+        cpf:'',
+        telefone:'',
+        email:'',
+        desconto:'',
     })
 
     function handleChange({target}){
@@ -30,10 +51,12 @@ const Cadastrar = ()=>{
     function handleSubmit(event){
         event.preventDefault();
         setEntidade([...entidade,form])         
-        setForm({        
+        setForm({
             nome:'',
-            idade:'',
-            nota1:'',
+            cpf:'',
+            telefone:'',
+            email:'',
+            desconto:'',
         })
     }
 
@@ -45,37 +68,43 @@ const Cadastrar = ()=>{
         <Section>
             <h1>Cadastro de Entidade</h1>
             <form onSubmit={handleSubmit}>
-                <input 
+                <Input 
                     placeholder="nome"
                     id='nome'
                     type="text"
                     value={form.nome}
-                    onChange={handleChange}
-                    
-                    
+                    onChange={handleChange}                    
                 />
-                <input 
+                <Input 
                     type="text" 
-                    id='idade'
-                    placeholder="idade"
-                    value={form.idade}
-                    onChange={handleChange}
-
-                    
-                    
+                    id='cpf'
+                    placeholder="cpf"
+                    value={form.cpf}
+                    onChange={handleChange}  
                 />
-                <input 
+                <Input 
                     type="text" 
-                    id='nota1'
-                    placeholder="nota"
-                    value={form.nota1}
+                    id='telefone'
+                    placeholder="telefone"
+                    value={form.telefone}
                     onChange={handleChange}
-
-
-                    
-                    
                 />
-                <button >Cadastrar</button>
+                <Input 
+                    placeholder="email"
+                    id='email'
+                    type="text"
+                    value={form.email}
+                    onChange={handleChange}
+                />
+                <Input 
+                    placeholder="desconto"
+                    id='desconto'
+                    type="text"
+                    value={form.desconto}
+                    onChange={handleChange}
+                />
+
+                <Button >Cadastrar</Button>
             </form>
         </Section>
     )

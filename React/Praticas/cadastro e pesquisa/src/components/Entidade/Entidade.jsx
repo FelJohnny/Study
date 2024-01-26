@@ -41,8 +41,6 @@ const StyledNavLink = styled(NavLink)`
     }
 `
 
-
-
 const Entidade = () => {
     const params = useParams();
   return (
