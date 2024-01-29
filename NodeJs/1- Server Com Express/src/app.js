@@ -1,7 +1,22 @@
 import  express from "express";
+import conectaNaDataBase from "./config/dbConnect.js";
 
+/*------------------------------------------data-base------------------------------------------------------------- */
+
+const conexao = await conectaNaDataBase();
+
+conexao.on("error", (erro)=>{
+    console.error("erro de conexao", erro);
+});
+
+conexao.once("open", ()=>{
+    console.log("Conexao com o banco feita com sucesso");
+});
+
+
+/*------------------------------------------------------------------------------------------------------- */
 const app = express();
-app.use(express.json()) // mideware, executa em todas as requisições e transforma em json, as requisicoes normalmente chegam como string
+app.use(express.json()) // midleware, executa em todas as requisições e transforma em json, as requisicoes normalmente chegam como string
 
 const livros =[
     {
@@ -25,7 +40,6 @@ function buscaLivro(id){ //comparando livro. com o id passado pelo parametro da 
 // GET RETORNA
 app.get("/",(req, res)=>{
     res.status(200).send("Resposta do servidor")
-
 });
 
 app.get("/livros",(req, res)=>{
@@ -52,5 +66,15 @@ app.put("/livros/:id",(req, res)=>{
     livros[index].titulo = req.body.titulo;
     res.status(200).json(livros[index]);
 })
+
+
+app.delete("/livros/:id",(req, res)=>{
+    const index = buscaLivro(req.params.id);
+    livros.splice(index, 1);
+    res.status(200).json(livros);
+});
+
+
+
 
 export default app;
