@@ -1,0 +1,14 @@
+Partes da requisição
+As partes que podem compor uma requisição são:
+
+URL, também chamado de caminho ou rota, sempre iniciado com http:// ou https://.
+Header, também chamado de cabeçalho, envia informações referentes ao cliente ou ao tipo de requisição. Alguns dados enviados através dos cabeçalhos são:
+host é o domínio do servidor que receberá a requisição.
+User-agent identifica o cliente, por exemplo, dados do navegador de onde está saindo a requisição.
+Content-Type é o formato do dado que está sendo enviado no body da requisição, por exemplo JSON, string etc. Confira a lista completa de tipos de dados e como devem ser declarados no header.
+Authorization são as credenciais de autenticação para acesso a recursos protegidos.
+Accept especifica o formato de retorno esperado na resposta, por exemplo, JSON.
+Body ou corpo da requisição, onde são trafegados dados enviados pelo cliente para serem recebidos pelo servidor, normalmente utilizado para dados mais estruturados e em requisições POST, PUT or PATCH. O tipo de dado enviado pelo body deve ser o mesmo especificado no Content-Type, por exemplo, application/json.
+Parâmetros são inseridos na URL para envio de dados específicos, muito utilizados, por exemplo, para envio de informações variáveis como termos de buscas, IDs etc.
+Método HTTP, entre os aceitos pela rota, especifica o tipo de operação solicitado pelo cliente. Os mais comuns são os métodos GET, POST, PUT e DELETE. Vamos trabalhar com estes métodos com mais profundidade durante o curso.
+
