@@ -1,9 +1,11 @@
-import mongoose, { version } from "mongoose";
+import { Int32 } from "mongodb";
+import mongoose from "mongoose";
 
 const autorSchema = new mongoose.Schema({
     id:{type: mongoose.Schema.Types.ObjectId},
     nome: {type: String, required: true},
-    nacionalidade: {types: String}
+    nacionalidade: {type: String},
+    idade: {type: Number}
 
 },{versionKey: false})
 

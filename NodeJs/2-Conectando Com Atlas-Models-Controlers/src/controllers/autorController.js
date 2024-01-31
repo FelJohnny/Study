@@ -22,7 +22,7 @@ class AutorController{
             const novoAutor = await autor.create(req.body);
             res.status(201).json({
                 message: "criado com sucesso", 
-                livro: novoAutor
+                autor: novoAutor
             });
         }catch(erro){
             res.status(500).json({
