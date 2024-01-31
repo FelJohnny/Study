@@ -18,10 +18,6 @@ conexao.once("open", ()=>{
 const app = express();
 routes(app);
 
-//PUT ALTERA
-
-
-
 
 
 export default app;
