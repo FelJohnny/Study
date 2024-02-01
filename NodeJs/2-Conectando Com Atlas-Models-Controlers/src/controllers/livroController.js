@@ -50,6 +50,18 @@ class LivroController{
         }
     }
 
+    static async buscarLivroPorEditora(req,res){
+        const queryEditora = req.query.editora;
+        try {
+            const livrosPorEditora = await livro.find({editora: queryEditora})//buscando da propriedade de livros editora
+            res.status(200).json(livrosPorEditora)
+        } catch (e) {
+            res.status(500).json({
+                message: `${e} não foi possivel encontrar a resposta`
+            })
+        }
+
+    }
     //------------------------------PUT-------------------------------------------------//
 
     static async AlteraLivro(req,res){
