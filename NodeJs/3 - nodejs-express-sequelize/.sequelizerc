@@ -1,0 +1,54 @@
+const path = require('path');
+//remapeando diretorios gerados pelo SEQUELIZE-CLI  pois ele gera e procura os arquivos na raiz do servidor
+
+module.exports = {
+    'config': path.resolve('./src/config', 'config.json'),
+    'models-path': path.resolve('./src/models'),
+    'seeders-path': path.resolve('./src/seeders/', 'config.json'),
+    'migrations-path': path.resolve('./src/migrations'),
+}
+
+
+
+/*
+    EXPLICAÇÃO DA DOCUMENTAÇÃO:
+    https://sequelize.org/docs/v6/other-topics/migrations/#the-sequelizerc-file
+
+    O arquivo .sequelizerc
+    Este é um arquivo de configuração especial. Ele permite especificar as seguintes opções que você normalmente passaria como argumentos para a CLI:
+
+    env: O ambiente para executar o comando
+    config: O caminho para o arquivo de configuração
+    options-path: o caminho para um arquivo JSON com opções adicionais
+    migrations-path: O caminho para a pasta de migrações
+    seeders-path: O caminho para a pasta seeders
+    models-path: O caminho para a pasta de modelos
+    url: a cadeia de conexão do banco de dados a ser usada. Alternativa ao uso de arquivos --config
+    debug: Quando disponível, mostra várias informações de depuração
+    Alguns cenários onde você pode usá-lo:
+
+    Você deseja substituir o caminho padrão para , migrationsou modelspasta .seedersconfig
+    Você deseja renomear config.jsonpara algo comodatabase.json
+    E muito mais. Vamos ver como você pode usar este arquivo para configuração personalizada.
+    ----------------------------------------------------------------------------------------------------------
+    para começar, vamos criar o .sequelizercarquivo no diretório raiz do seu projeto, com o seguinte conteúdo:
+
+    // .sequelizerc
+
+    const path = require('path');
+
+    module.exports = {
+    'config': path.resolve('config', 'database.json'),
+    'models-path': path.resolve('db', 'models'),
+    'seeders-path': path.resolve('db', 'seeders'),
+    'migrations-path': path.resolve('db', 'migrations')
+    };
+
+    Com esta configuração você está dizendo à CLI para:
+
+    Use config/database.jsonarquivo para configurações;
+    Use db/modelscomo pasta de modelos;
+    Use db/seederscomo pasta de seeders;
+    Use db/migrationscomo pasta de migrações.
+
+*/
