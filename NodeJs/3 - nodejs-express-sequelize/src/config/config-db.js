@@ -8,7 +8,7 @@ const config ={
         "database": process.env.DATABASE_DB,
         "host": process.env.HOST_DB,
         "port": process.env.PORT_DB,
-        "dialect": process.env.DIALECT_DB
+        "dialect": 'mysql',
       }
 }
 
@@ -16,7 +16,7 @@ const config ={
 const sequelize = new Sequelize(config.development.database, config.development.username, config.development.password, {
     host: config.development.host,
     port: config.development.port,
-    dialect: config.development.dialect
+    dialect: 'mysql'
   });
 
 module.exports = sequelize;
