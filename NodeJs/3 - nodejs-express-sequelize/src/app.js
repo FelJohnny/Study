@@ -1,21 +1,19 @@
 const express = require('express');
 const sequelize = require('./config/config-db.js')
+const routes = require('./routes/index.js')//ou /routes
+
 const app = express();
 
-app.use(express.json());
-
-app.get('/teste', (req, res) => {
-  res.status(200).send({ mensagem: 'boas-vindas à API' });
-});
+routes(app)
 
 
 sequelize.authenticate()
-  .then(() => {
-    console.log('Conexão estabelecida com sucesso.');
-  })
-  .catch((err) => {
-    console.error('Não foi possível conectar ao banco de dados:', err);
-  });
+.then(() => {
+  console.log('Conexão estabelecida com sucesso.');
+})
+.catch((err) => {
+  console.error('Não foi possível conectar ao banco de dados:', err);
+});
 
 
 module.exports = app;
