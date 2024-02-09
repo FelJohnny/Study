@@ -3,6 +3,7 @@ const { Sequelize } = require('sequelize');
 
 const config = {
     "development": {
+        
         "username": process.env.USER_DB,
         "password": process.env.PASSWORD_DB,
         "database": process.env.DATABASE_DB,
@@ -10,6 +11,7 @@ const config = {
         "port": process.env.PORT_DB,
         "dialect": process.env.DIALECT_DB,
       }
+
 }
 
 //instanciando 

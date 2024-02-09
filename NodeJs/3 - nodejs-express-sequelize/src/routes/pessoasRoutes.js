@@ -4,4 +4,6 @@ const PessoaController = require('../controllers/PessoaController.js');
 
 const router = Router();
 
-router.get('./pessoas', PessoaController.RetornaTodas);
+router.get('/pessoas', PessoaController.RetornaTodas);
+
+module.exports= router

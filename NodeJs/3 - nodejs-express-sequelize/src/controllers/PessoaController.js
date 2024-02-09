@@ -6,7 +6,7 @@ class PessoaController{
             const listaDePessoas = await database.findAll();
             return res.status(200).json(listaDePessoas)
         } catch (error) {
-            
+            console.log('deu erro')
         }
     }
 }

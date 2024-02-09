@@ -3,8 +3,6 @@ const pessoas = require('./pessoasRoutes.js')
 
 
 module.exports = (app)=>{
-    app.use(
-        express.json(),
-        pessoas,
-    );
+    app.use(express.json());
+    app.use(pessoas);
 }
