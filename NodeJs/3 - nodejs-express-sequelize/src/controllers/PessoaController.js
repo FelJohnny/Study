@@ -1,18 +1,13 @@
-//const database = require('../models')
-const {Pessoa} = require('../models')
-class PessoaController{
+const Controller = require('./Controller.js');
+const PessoaServices = require('../services/PessoaServices.js')
 
-    static async RetornaTodas(req,res){
-        try {
-            //const listaDePessoas = await database.Pessoa.findAll();
-            const listaDePessoas = await Pessoa.findAll();
-            return res.status(200).json(listaDePessoas)
-        } catch (error) {
-            console.log(`deu erro ${error}`)
-            return res.status(500).json(`deu erro, ${error}`)
-        }
+const pessoaServices = new PessoaServices();
+
+class PessoaController extends Controller{
+    constructor(){
+        super(pessoaServices);
     }
 }
 
 
-module.exports = PessoaController
+module.exports = PessoaController;
