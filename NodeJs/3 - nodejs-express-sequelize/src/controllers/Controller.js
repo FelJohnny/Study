@@ -1,16 +1,17 @@
 
 class Controller{
-    constructor(entidadeService){
-        this.entidadeService = entidadeService;
+    constructor(propsServices){
+        this.propsServices = propsServices;
     }
     async pegaTodos(req,res){
         try{
-            const listaDeRegistro = await this.entidadeService.pegaTodosRegistros();
+            const listaDeRegistro = await this.propsServices.pegaTodosRegistros();
             return res.status(200).json(listaDeRegistro)
         }catch(e){
             //erro
         }
     }
 }
+
 
 module.exports = Controller;
