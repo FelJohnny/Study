@@ -1,11 +1,22 @@
+const e = require("express");
 
 class Controller{
     constructor(propsServices){
         this.propsServices = propsServices;
     }
 
+//-----------CREATE--------------//
+    async criaRegistroController(req, res) {
+        const dadosParaCriacao = req.body;
+        try {
+            const novoRegistroCriado = await this.propsServices.criaRegistro(dadosParaCriacao);
+            return res.status(200).json(novoRegistroCriado);
+        } catch (e) {
+            return res.status(400).json({menssagem:`erro ao criar, mensagem do erro:${e}`})//erro
+        }
+   }
 
-    // SELECT * FROM PESSOAS
+    //-------------------------------------READ-------------------------------------//
     async pegaTodosController(req,res){
         try{
             const listaDeRegistro = await this.propsServices.pegaTodosRegistros();
@@ -15,14 +26,12 @@ class Controller{
         }
     }
 
-    //UPDATE PELO ID
-    async AtulizaDadoController(req, res){
+    //-------------------------------------UPDATE PELO ID-------------------------------------//
+    async atulizaDadoController(req, res){
         const {id}= req.params;
         const dadosAtualizados = req.body;
-        console.log(dadosAtualizados)
-        console.log(id)
         try{
-            const foiAtulizado = await this.propsServices.atulizaDado(dadosAtualizados, Number(id))
+            const foiAtulizado = await this.propsServices.atualizaDado(dadosAtualizados, Number(id))
             if(!foiAtulizado){
                 res.status(400).json({mensagem: `o registro não ${id} foi atualizado`})
                 
@@ -35,6 +44,10 @@ class Controller{
             console.log(e)
         }
     }
+
+    //-------------------------------------DELETE PELO ID-------------------------------------//
+
+
 }
 
 
