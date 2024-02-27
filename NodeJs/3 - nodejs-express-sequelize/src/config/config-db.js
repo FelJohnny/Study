@@ -11,7 +11,6 @@ const config = {
         "port": process.env.PORT_DB,
         "dialect": process.env.DIALECT_DB,
       }
-
 }
 
 //instanciando 

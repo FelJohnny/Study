@@ -2,7 +2,7 @@ const Services = require('./Services.js')
 
 class PessoaServices extends Services{
     constructor(){
-        super('Pessoa');
+        super('Pessoa');//Pessoa é o nome do model
     }
 }
 
