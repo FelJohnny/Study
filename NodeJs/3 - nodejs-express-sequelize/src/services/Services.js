@@ -15,6 +15,10 @@ class Services {
         return dataModels[this.nomeDoModel].findAll();
     }
 
+    async pegaUmRegistroPorId(id) {
+        return dataModels[this.nomeDoModel].findByPk(id);
+    }
+
     //-----------UPDATE--------------//
     async atualizaDado(dadosAtualizados, id){
         const ListaDeRegistrosAtualizado = dataModels[this.nomeDoModel].update(dadosAtualizados,{
@@ -28,6 +32,9 @@ class Services {
         }
     }
     //-----------DELETE--------------//
+    async excluiRegistro(id) {
+        return dataModels[this.nomeDoModel].destroy({ where: { id: id } });
+    }
 }
 
 
