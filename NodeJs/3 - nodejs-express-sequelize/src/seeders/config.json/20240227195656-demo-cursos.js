@@ -3,23 +3,50 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+    
+      await queryInterface.bulkInsert('cursos', [
+        {
+          titulo: 'API com Express',
+          descricao: 'Curso de API com Express e MongoDB',
+          data_inicio: '2023-01-01',
+          categoria_id: 1,
+          pessoa_id: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          titulo: 'SpringBoot',
+          descricao: 'Curso de Java com Spring Framework',
+          data_inicio: '2023-01-01',
+          categoria_id: 2,
+          pessoa_id: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          titulo: 'Python Web com Django',
+          descricao: 'Curso de aplicações web com Django',
+          data_inicio: '2023-01-01',
+          categoria_id: 3,
+          pessoa_id: 6,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          titulo: 'Orientação a Objetos com C#',
+          descricao: 'Curso de C#: coleções, arquivos e libs',
+          data_inicio: '2023-01-01',
+          categoria_id: 4,
+          pessoa_id: 6,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ], {});
+    
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-  }
+    
+      await queryInterface.bulkDelete('cursos', null, {});
+    }
 };
