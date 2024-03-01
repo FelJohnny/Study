@@ -10,7 +10,7 @@ router.get('/pessoas', (req, res)=>{ pessoaController.pegaTodosController(req, r
 router.get('/pessoas/:id', (req, res)=>{ pessoaController.pegaUmRegistroPorIdController(req, res)});
 router.put('/pessoas/:id', (req, res)=>{ pessoaController.atulizaDadoController(req, res)});
 router.delete('/pessoas/:id', (req, res)=>{ pessoaController.excluiRegistroController(req, res)});
-router.post('/pessoas/:idEstudante/matriculas', (req, res)=>{ pessoaController.setMatriculaPorIdController(req, res)});
+router.post('/pessoas/:idEstudante/matriculas', (req, res)=>{ pessoaController.criaMatriculaPorIdController(req, res)});
 router.get('/pessoas/:idEstudante/matriculas', (req, res)=>{ pessoaController.pegaMatriculaPorIdController(req, res)});
 
 

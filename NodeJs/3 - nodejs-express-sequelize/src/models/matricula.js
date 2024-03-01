@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       Matricula.belongsTo(models.Curso,{
         foreignKey: 'curso_id'
       });
+      module.exports = Matricula;
     }
   }
   Matricula.init({
