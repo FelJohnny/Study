@@ -1,0 +1,4 @@
+1 install dependencias:
+    - express, sequelize, banco:mysql, sequelize-cli, nodemon(  "scripts": {"dev": "nodemon src/server.js"})
+
+ sequelize db:migrate

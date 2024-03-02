@@ -17,11 +17,13 @@ class PessoaServices extends Services{
     async criarMatriculaPorId(id, matricula){
         try{
             const estudante = await super.pegaUmRegistroPorId(id);
-            console.log(matricula.status)
+            const curso = await super.pegaUmRegistroPorId(matricula.curso_id)
+            console.log(curso)
 
             const novaMatricula = await Matricula.create({
-                status: matricula.status,
                 estudante_id: estudante.id,
+                curso_id: curso.id,
+                status: matricula.status,
                 
             });
 
