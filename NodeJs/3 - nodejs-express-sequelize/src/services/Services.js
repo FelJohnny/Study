@@ -16,7 +16,7 @@ class Services {
     }
 
     async pegaUmRegistroPorId(id) {
-        return dataModels[this.nomeDoModel].findByPk(id);
+        return  dataModels[this.nomeDoModel].findByPk(id);
     }
 
     //-----------UPDATE--------------//

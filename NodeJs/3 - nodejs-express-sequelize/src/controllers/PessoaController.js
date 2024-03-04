@@ -10,8 +10,8 @@ class PessoaController extends Controller{
     async pegaMatriculaPorIdController(req, res){
         try{
             const {idEstudante} = req.params;
-            const mastriculasEncontradas = await pessoaServices.pegaMatriculaPorId(Number(idEstudante))
-            return res.status(200).json(mastriculasEncontradas)
+            const matriculasEncontradas = await pessoaServices.pegaMatriculaPorId(Number(idEstudante))
+                return res.status(200).json(matriculasEncontradas)
         }catch(e){
             return res.status(500).json({mensagem: `erro${e}`})
 
@@ -21,8 +21,8 @@ class PessoaController extends Controller{
     async criaMatriculaPorIdController(req, res){
         try{
             const {idEstudante} = req.params;
-            const matricula = req.body;
-            const mastriculasCadastradas = await pessoaServices.criarMatriculaPorId(Number(idEstudante), matricula)
+            const reqMatricula = req.body;
+            const mastriculasCadastradas = await pessoaServices.criarMatriculaPorId(Number(idEstudante), reqMatricula)
             return res.status(200).json({mensagm: 'matricula criada,',matricula: mastriculasCadastradas})
         }catch{
 

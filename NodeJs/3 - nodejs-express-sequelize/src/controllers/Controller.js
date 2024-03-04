@@ -31,7 +31,11 @@ class Controller{
         const { id } = req.params;
         try{
             const umRegistro = await this.propsServices.pegaUmRegistroPorId(Number(id));
-            return res.status(200).json(umRegistro);
+            if(umRegistro){
+                return res.status(200).json(umRegistro)
+            }else{
+                return res.status(500).json({mensagem:"ID não encontrado"})
+            }
         }catch (erro){
             return res.status(400).json({menssagem:`erro ao buscar registro, mensagem do erro: ${e}`})
         }
