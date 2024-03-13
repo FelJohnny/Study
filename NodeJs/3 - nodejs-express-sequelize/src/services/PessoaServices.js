@@ -25,6 +25,8 @@ class PessoaServices extends Services{
             return console.log(e)
         }
     }
+
+    
     async criarMatriculaPorId(id, reqMatricula){
         try{
             //console.log(reqMatricula)
