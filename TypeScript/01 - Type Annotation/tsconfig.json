@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // o tipo de convert que sera aplicado no js, com ESNext pega sempre a ultima versão do js
+    "strict": true,                                    
+
+    "module": "commonjs",      
+
+    "esModuleInterop": true,   
+
+    "forceConsistentCasingInFileNames": true,            
+
+
+    "skipLibCheck": true                                 
+  }
+}
