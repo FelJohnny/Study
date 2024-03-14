@@ -31,7 +31,7 @@ const nintendo ={
 
 function transformarPreco(produto: {nome:string; preco:string}){
    produto.preco = 'R$ ' + produto.preco;
-   return produto
+   return produto // 'R$ 10'
 }
 
 const produtoNovo = transformarPreco(nintendo)
