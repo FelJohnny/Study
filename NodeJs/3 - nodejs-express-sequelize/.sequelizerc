@@ -2,10 +2,10 @@ const path = require('path');
 //remapeando diretorios gerados pelo SEQUELIZE-CLI  pois ele gera e procura os arquivos na raiz do servidor
 
 module.exports = {
-    'config': path.resolve('./src/config', 'config-migrate.js'),
-    'models-path': path.resolve('./src/models'),
-    'seeders-path': path.resolve('./src/seeders/', 'config.json'),
-    'migrations-path': path.resolve('./src/migrations'),
+    'config': path.resolve('./src/database/config', 'config-migrate.js'),
+    'models-path': path.resolve('./src/database/models'),
+    'seeders-path': path.resolve('./src/database/seeders/', 'config.json'),
+    'migrations-path': path.resolve('./src/database/migrations'),
 }
 
 

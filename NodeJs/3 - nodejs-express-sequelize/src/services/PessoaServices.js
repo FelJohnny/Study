@@ -1,5 +1,5 @@
 const Services = require('./Services.js')
-const Matricula = require('../models/matricula.js')
+const Matricula = require('../database/models/matricula.js')
 const MatriculaServices = require('./MatriculaServices.js');
 const matricula = new MatriculaServices()
 class PessoaServices extends Services{
