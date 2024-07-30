@@ -1,0 +1,8 @@
+GET  http://localhost:3000/api/usuarios
+
+###
+POST  http://localhost:3000/api/dogs?busca=teste2
+
+{
+    "corpo":"body da req",
+}
