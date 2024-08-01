@@ -32,4 +32,3 @@ export default async function Menu(){
         </nav>
     )
 }
-//usaria global context para deixar a atualização instantanea, finalizei mas ainda não corrigi com a prox aula
