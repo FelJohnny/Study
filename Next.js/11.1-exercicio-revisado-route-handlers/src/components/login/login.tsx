@@ -7,9 +7,10 @@ export default function LoginComponent(){
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
+    
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault()
-        const api = await fetch('http://localhost:3000/api/login',{
+        const api = await fetch('/api/login',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

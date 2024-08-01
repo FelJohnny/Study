@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 
-export async function acessaPerfil() {
+export async function GET(){
+
     const token = cookies().get('token')?.value;
     const response = await fetch('https://api.origamid.online/conta/perfil',{
         method:'GET',
@@ -8,5 +9,10 @@ export async function acessaPerfil() {
             Authorization:'Barear ' + token, 
         }
     });
-    return (await response.json());
+    const data = await response.json();
+    
+
+    return Response.json({
+        data
+    })
 }
