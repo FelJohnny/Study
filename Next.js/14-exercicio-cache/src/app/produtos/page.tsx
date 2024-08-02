@@ -7,6 +7,7 @@ export type Produtos={
     importado:number
 }
 
+import ButtonAtualiza from "@/components/buttonAtualiza/buttonAtualiza";
 export default async function PageProdutos() {
 
     const response = await fetch('https://api.origamid.online/produtos')
@@ -15,6 +16,7 @@ export default async function PageProdutos() {
     return(
         <main>
             <h1>produtos</h1>
+            <ButtonAtualiza/>
             {produtos.map((produto)=>(
                 <ul key={produto.id}>
                     <li>{produto.nome}</li>
