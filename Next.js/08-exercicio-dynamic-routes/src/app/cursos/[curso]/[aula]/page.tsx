@@ -14,7 +14,7 @@ type Curso={
     tempo: number,
 };
 
-export default async function ({params}:PageParams) {
+export default async function AulaPages({params}:PageParams) {
     
     const response = await fetch(`https://api.origamid.online/cursos/${params.curso}/${params.aula}`)
     const json = await response.json() as Curso
