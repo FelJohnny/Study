@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redux</title>
+    <script src="./redux.min.js"></script>
+  </head>
+  <body>
+    <script>
+      const SOMAR = "SOMAR";
+      function somar(payload) {
+        return { type: "SOMAR", payload };
+      }
+      const initialState = 5;
+
+      //a action utilizamos para passar o payload para o reducer
+      function reducer(state = initialState, action) {
+        if (action.type === SOMAR) {
+          return state + action.payload;
+        } else {
+          return state;
+        }
+      }
+
+      //criando a store, onde armazenamos os estados e suas tratativas
+      const store = Redux.createStore(reducer);
+      // getState utilizado para pegar o valor atual dos estados da store, sempre que usado o valor atualiza
+      let state = store.getState();
+      console.log(state);
+
+      //envia os dados para a store com type e payload, para assimna store se aplicado, valida o type e aplica a alteração devida
+      store.dispatch({ type: SOMAR, payload: 10 });
+      store.dispatch({ type: SOMAR, payload: 10 });
+      //o console log nesse caso so vai pegar a alteração apos chamar de novo o getState
+      state = store.getState();
+      console.log(state);
+      store.dispatch(somar(20));
+      state = store.getState();
+      console.log(state);
+    </script>
+  </body>
+</html>

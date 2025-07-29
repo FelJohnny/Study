@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redux - Subscribe</title>
+    <script src="./redux.min.js"></script>
+  </head>
+  <body>
+    <h1>Total: <span id="total"></span></h1>
+    <button id="Incrementar">Incrementar</button>
+    <script>
+      const SOMAR = "SOMAR";
+      const INCREMENTAR = "INCREMENTAR";
+      function somar(payload) {
+        return { type: "SOMAR", payload };
+      }
+
+      const initialState = 0;
+      //a action utilizamos para passar o payload para o reducer
+      function reducer(state = initialState, action) {
+        if (action.type === SOMAR) {
+          return state + action.payload;
+        } else {
+          return state;
+        }
+      }
+
+      //criando a store, onde armazenamos os estados e suas tratativas
+      const store = Redux.createStore(reducer);
+      console.log(store);
+
+      function render() {
+        const state = store.getState();
+        const total = document.getElementById("total");
+        total.innerHTML = state;
+      }
+      render();
+
+      //subscribe é ativado sempre que um dispatch é acionado
+      store.subscribe(render);
+
+      const btn = document.getElementById("Incrementar");
+
+      btn.addEventListener("click", () => store.dispatch(somar(10)));
+    </script>
+  </body>
+</html>
